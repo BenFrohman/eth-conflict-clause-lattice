@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "eth-conflict-clause-lattice",
+  "author": "Benjamin Stanley Frohman (ORCID: 0009-0006-7068-3718)",
+  "license": "Apache-2.0",
+  "technologies": {
+    "titan_audit_doi": "10.5281/zenodo.23630648",
+    "sealguard_doi": "10.5281/zenodo.23631670",
+    "sentinel_gate_doi": "10.5281/zenodo.23632766"
+  },
+  "merkle_root_sha256": "6c4dc8976b9ea256d457851ae49f504b739a13f494c6eda6f2769b8d5b34b926",
+  "sentinel_gate_receipt": {
+    "engine": "Sentinel Gate v1.0.0 (DOI: 10.5281/zenodo.23632766)",
+    "author": "Benjamin Stanley Frohman (ORCID: 0009-0006-7068-3718)",
+    "action_type": "seal_and_attest_public_release",
+    "action_id": "6c4dc8976b9ea256d457851ae49f504b739a13f494c6eda6f2769b8d5b34b926",
+    "permitted": true,
+    "reason": "PERMITTED_DETERMINISTIC_POLICY",
+    "receipt_sha256": "c8e17cec2c8049687f6d14dc921023379ebcc93117d7bbcb7970a8453ecd31f5"
+  },
+  "files": {
+    ".gitignore": {
+      "sha256": "8ec770330af8d7a78735e64d96ccc881826ff77eb7d0d34af9c9d51f8e35169b",
+      "bytes": 87
+    },
+    ".zenodo.json": {
+      "sha256": "ab73f6b173b5a16d4843b3c996de6a87edab2fdae64d9d8de3cce422a8af884e",
+      "bytes": 2251
+    },
+    "AUTHORS.md": {
+      "sha256": "83e3c502e875d6ea2ba2e442c71e08df3ecbd4f291ac3e32bf403370f46624eb",
+      "bytes": 300
+    },
+    "AxiomAudit.lean": {
+      "sha256": "d7c30f533de769d72b7f6165103828fe76efcab5e08a32f51204d28f913d3104",
+      "bytes": 3808
+    },
+    "CITATION.cff": {
+      "sha256": "120ebae10e9a4615993b6cbc9fb4a07ce7bd057480953f31e8615e9ff56ee8fb",
+      "bytes": 730
+    },
+    "ConflictClauseLattice/FinalProductTheorem.lean": {
+      "sha256": "54cc6c716def8ea7baa0b37f5ef98841d91e323860d0cff2198af3fc3337e446",
+      "bytes": 4544
+    },
+    "ConflictClauseLattice/HomologicalCertificate.lean": {
+      "sha256": "a99dcbac440a0d8814495e1543bbdfe5c48a2d6c02157476bb61c04f9736943d",
+      "bytes": 7752
+    },
+    "ConflictClauseLattice/PosetLattice.lean": {
+      "sha256": "f1f39e6c8197e249f906ad6166092430d0f30ed10c6fbedbc368abe0f0f30ad3",
+      "bytes": 10284
+    },
+    "ConflictClauseLattice/StepCountingMonad.lean": {
+      "sha256": "2e2f49b21c4f449c0a7ffe359776d1a62b612cdee3f094a55b1f23cebd223b96",
+      "bytes": 6004
+    },
+    "ConflictClauseLattice.lean": {
+      "sha256": "cf5a0051cc9e70be5d102856b4f71e8aaf31d2d29187a2c9c6c7c66d77b6c027",
+      "bytes": 365
+    },
+    "LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "NOTICE": {
+      "sha256": "54f96e1a287d314e72d6a2f64e63fb7264faa08774c3367dd05345c3c7bdc586",
+      "bytes": 409
+    },
+    "README.md": {
+      "sha256": "a9822de0bcdc5e98f358739fd371d3c0fe7abeb9cf6e4e877ddf38ca0cc28bb7",
+      "bytes": 3897
+    },
+    "audit/TITAN_AUDIT_CERTIFICATE.json": {
+      "sha256": "861a37d0a243ed0e434774c9b5f07f57ad97ccaac10386e6ff0b1f3617d67e99",
+      "bytes": 3396
+    },
+    "audit/TITAN_AUDIT_REPORT.md": {
+      "sha256": "62a8968f8a99d761686f73686662d2bc5f385ba2eb16018c1b8902794d5c1da1",
+      "bytes": 1155
+    },
+    "audit/report.json": {
+      "sha256": "861a37d0a243ed0e434774c9b5f07f57ad97ccaac10386e6ff0b1f3617d67e99",
+      "bytes": 3396
+    },
+    "audit/report.md": {
+      "sha256": "62a8968f8a99d761686f73686662d2bc5f385ba2eb16018c1b8902794d5c1da1",
+      "bytes": 1155
+    },
+    "ip_pipeline/seal_and_verify.py": {
+      "sha256": "67645d514f01aade026aca549fe24e56f571f78d25b4aa8865c4df35941a8199",
+      "bytes": 7488
+    },
+    "lake-manifest.json": {
+      "sha256": "50e1f90e43d3e22d67f2a4093fc691098db3d57e8581ad33ca2796a088fa909c",
+      "bytes": 153
+    },
+    "lakefile.lean": {
+      "sha256": "0edd962286f53c2c0c60c4d0c88b24b5c070c2db4e84d01b1a3fbd26a2698262",
+      "bytes": 489
+    },
+    "lean-toolchain": {
+      "sha256": "1098ca8368e0db12138f33b070187e1f6527984ae0451a587b20e3e661f96a76",
+      "bytes": 29
+    },
+    "paper/lattice_visualization_1.jpg": {
+      "sha256": "fbfc11924ee7f5b71b50d70c15c7167880700d257929bddcedc20c2da2716922",
+      "bytes": 173096
+    },
+    "paper/lattice_visualization_2.jpg": {
+      "sha256": "c6dcf6ff48d9eadb86945866a24ca83e07ca8b17240019d828c69bbe949311e2",
+      "bytes": 216465
+    },
+    "paper/main.pdf": {
+      "sha256": "8d52bf76f0ffc6f3432150e91a8ece7251c7b1a5fa7833c77c563620f60c2520",
+      "bytes": 449246
+    },
+    "paper/main.tex": {
+      "sha256": "bbf3dac3b905968e85b32aa3c004d212b80f5a7cd057030a158c6de55f4ebeb3",
+      "bytes": 20958
+    },
+    "visuals/conflict_clause_lattice.html": {
+      "sha256": "e1b0cfe8bd361d7c4ffd993b83cddf41f584f7e45ef8d5c241a284f4a944b712",
+      "bytes": 19656
+    },
+    "visuals/lattice_visualization_1.jpg": {
+      "sha256": "fbfc11924ee7f5b71b50d70c15c7167880700d257929bddcedc20c2da2716922",
+      "bytes": 173096
+    },
+    "visuals/lattice_visualization_2.jpg": {
+      "sha256": "c6dcf6ff48d9eadb86945866a24ca83e07ca8b17240019d828c69bbe949311e2",
+      "bytes": 216465
+    }
+  }
+}

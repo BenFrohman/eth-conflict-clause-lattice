@@ -1,0 +1,110 @@
+{
+  "tool": {
+    "name": "titan-audit",
+    "version": "1.0.0",
+    "author": "Benjamin Stanley Frohman (ORCID: 0009-0006-7068-3718)",
+    "doi": "10.5281/zenodo.23630648"
+  },
+  "project": {
+    "path": "/workspace/eth-conflict-clause-lattice",
+    "name": "eth-conflict-clause-lattice",
+    "lean_toolchain": "leanprover/lean4:v4.30.0-rc1",
+    "git_head": "f75610e3d1d53701d750801d850c72cd9c86df8d"
+  },
+  "build": {
+    "requested": true,
+    "exit_code": 0,
+    "success": true,
+    "jobs": 7,
+    "errors": [],
+    "sorry_warnings": 0,
+    "unused_variable_warnings": []
+  },
+  "axiom_audit": {
+    "ran": true,
+    "exit_code": 0,
+    "errors": [],
+    "modules": 5,
+    "theorems": 56,
+    "clean_theorems": 56,
+    "nonstandard": [],
+    "per_module": {
+      "ConflictClauseLattice.HomologicalCertificate": {
+        "theorems": 18,
+        "nonstandard": 0
+      },
+      "ConflictClauseLattice.PosetLattice": {
+        "theorems": 25,
+        "nonstandard": 0
+      },
+      "ConflictClauseLattice.StepCountingMonad": {
+        "theorems": 12,
+        "nonstandard": 0
+      },
+      "ConflictClauseLattice.FinalProductTheorem": {
+        "theorems": 1,
+        "nonstandard": 0
+      }
+    }
+  },
+  "source_scan": {
+    "forbidden": [],
+    "vacuity_heuristics": [],
+    "counts": {}
+  },
+  "tree": {
+    "sha256": "21a8eb9d03dcf39258a14f1aeb8b5025ab81bfe1ecbdfa333903f410c7240145",
+    "files": 9,
+    "entries": [
+      {
+        "path": "AxiomAudit.lean",
+        "sha256": "d7c30f533de769d72b7f6165103828fe76efcab5e08a32f51204d28f913d3104"
+      },
+      {
+        "path": "ConflictClauseLattice.lean",
+        "sha256": "cf5a0051cc9e70be5d102856b4f71e8aaf31d2d29187a2c9c6c7c66d77b6c027"
+      },
+      {
+        "path": "ConflictClauseLattice/FinalProductTheorem.lean",
+        "sha256": "54cc6c716def8ea7baa0b37f5ef98841d91e323860d0cff2198af3fc3337e446"
+      },
+      {
+        "path": "ConflictClauseLattice/HomologicalCertificate.lean",
+        "sha256": "a99dcbac440a0d8814495e1543bbdfe5c48a2d6c02157476bb61c04f9736943d"
+      },
+      {
+        "path": "ConflictClauseLattice/PosetLattice.lean",
+        "sha256": "f1f39e6c8197e249f906ad6166092430d0f30ed10c6fbedbc368abe0f0f30ad3"
+      },
+      {
+        "path": "ConflictClauseLattice/StepCountingMonad.lean",
+        "sha256": "2e2f49b21c4f449c0a7ffe359776d1a62b612cdee3f094a55b1f23cebd223b96"
+      },
+      {
+        "path": "lake-manifest.json",
+        "sha256": "50e1f90e43d3e22d67f2a4093fc691098db3d57e8581ad33ca2796a088fa909c"
+      },
+      {
+        "path": "lakefile.lean",
+        "sha256": "0edd962286f53c2c0c60c4d0c88b24b5c070c2db4e84d01b1a3fbd26a2698262"
+      },
+      {
+        "path": "lean-toolchain",
+        "sha256": "1098ca8368e0db12138f33b070187e1f6527984ae0451a587b20e3e661f96a76"
+      }
+    ],
+    "method": "sha256 of 'sha256  path\\n' lines, sorted by path, over *.lean (excluding .lake/.git) + lakefile/manifest/toolchain"
+  },
+  "verdict": {
+    "status": "PASS",
+    "reasons": [],
+    "vacuity_warnings_in_build": 0
+  },
+  "generated_at_utc": "2026-10-28T20:01:35+00:00",
+  "signature": {
+    "alg": "ed25519",
+    "public_key_b64": "lH+f7+wvxv8nPanYa5uCAkh32nWbVGgVppArvRVm1tI=",
+    "payload": "canonical JSON of report without 'signature' (sort_keys, compact, UTF-8)",
+    "value_b64": "svRztF+vO42iQE9E0725LGgkw78e4x/n7WAKZA9AdkTeNx6bMzuUVNt8bvRrHumSLBjQoeSzsL8SbHva0FcMCQ=="
+  }
+}
