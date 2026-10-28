@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "Sub-Exponential Refutation of the Exponential Time Hypothesis via Homological Certificate Topologies on Conflict-Clause Poset Lattices"
+message: "If you use this software or formalization, please cite it using the metadata from this file."
+type: software
+authors:
+  - family-names: Frohman
+    given-names: Benjamin Stanley
+    orcid: "https://orcid.org/0009-0006-7068-3718"
+    affiliation: "Abstract AI Research Syndicate & Formal Methods Engineering Group"
+version: 1.0.0
+date-released: "2026-10-28"
+license: Apache-2.0
+keywords:
+  - Exponential Time Hypothesis
+  - "#3-SAT"
+  - Conflict-Clause Poset Lattice
+  - Homological Certificates
+  - Lean 4
+  - Step-Counting Monad
+  - Algorithmic Provenance

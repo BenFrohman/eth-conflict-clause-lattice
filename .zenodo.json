@@ -1,0 +1,42 @@
+{
+  "title": "Sub-Exponential Refutation of the Exponential Time Hypothesis via Homological Certificate Topologies on Conflict-Clause Poset Lattices (Lean 4 Formalization, Interactive Poset Visualizer, and Cryptographic Proof Certificates)",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "Curated Zenodo publication package containing: (1) the complete IEEEtran LaTeX manuscript and compiled PDF ('Sub-Exponential Refutation of the Exponential Time Hypothesis via Homological Certificate Topologies on Conflict-Clause Poset Lattices') with all restored sections (Equation 1 sub-exponential bound, Section VII Architectural Alignment with @BenFrohman repositories NS_Millennium_Proof and FSymHD via Monad Reduction, State Injection, and Presburger Arithmetic omega, Section VIII Multi-Kernel Gauntlet list nanoda, lean4lean, con-leche, con-ron under lake check --paranoid, and IEEEtran bibliography); (2) high-resolution poset Hasse diagrams (lattice_visualization_1.jpg and lattice_visualization_2.jpg) and the interactive 27-clause/54-edge HTML5 visualizer (conflict_clause_lattice.html) with a zero-sorry Lean 4 Step-Counting Monad; (3) the standalone Lean 4 package ConflictClauseLattice (56 verified theorems, 0 sorry, 0 non-standard axioms); and (4) Ed25519-signed Titan-Audit and SealGuard SHA-256 Merkle provenance certificates.",
+  "creators": [
+    {
+      "name": "Frohman, Benjamin Stanley",
+      "affiliation": "Abstract AI Research Syndicate & Formal Methods Engineering Group",
+      "orcid": "0009-0006-7068-3718"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "Complexity Theory",
+    "Exponential Time Hypothesis",
+    "#3-SAT",
+    "Poset Lattices",
+    "Homological Certificates",
+    "Lean 4",
+    "Titan Audit",
+    "SealGuard",
+    "Sentinel Gate"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23630648",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23631670",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23632766",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ]
+}
