@@ -6,16 +6,16 @@
     "doi": "10.5281/zenodo.23630648"
   },
   "project": {
-    "path": "/workspace/eth-conflict-clause-lattice",
+    "path": ".",
     "name": "eth-conflict-clause-lattice",
     "lean_toolchain": "leanprover/lean4:v4.30.0-rc1",
-    "git_head": "f75610e3d1d53701d750801d850c72cd9c86df8d"
+    "git_head": "e06725246e557aadda69297fc8f638fceba9d125"
   },
   "build": {
     "requested": true,
     "exit_code": 0,
     "success": true,
-    "jobs": 7,
+    "jobs": 1980,
     "errors": [],
     "sorry_warnings": 0,
     "unused_variable_warnings": []
@@ -25,20 +25,20 @@
     "exit_code": 0,
     "errors": [],
     "modules": 5,
-    "theorems": 56,
-    "clean_theorems": 56,
+    "theorems": 68,
+    "clean_theorems": 68,
     "nonstandard": [],
     "per_module": {
-      "ConflictClauseLattice.HomologicalCertificate": {
-        "theorems": 18,
-        "nonstandard": 0
-      },
       "ConflictClauseLattice.PosetLattice": {
         "theorems": 25,
         "nonstandard": 0
       },
       "ConflictClauseLattice.StepCountingMonad": {
-        "theorems": 12,
+        "theorems": 24,
+        "nonstandard": 0
+      },
+      "ConflictClauseLattice.HomologicalCertificate": {
+        "theorems": 18,
         "nonstandard": 0
       },
       "ConflictClauseLattice.FinalProductTheorem": {
@@ -53,12 +53,12 @@
     "counts": {}
   },
   "tree": {
-    "sha256": "21a8eb9d03dcf39258a14f1aeb8b5025ab81bfe1ecbdfa333903f410c7240145",
+    "sha256": "b96bbdae6fc2877179dbb45cc53c468f6474abbdfd298f1348ed0d115db90b62",
     "files": 9,
     "entries": [
       {
         "path": "AxiomAudit.lean",
-        "sha256": "d7c30f533de769d72b7f6165103828fe76efcab5e08a32f51204d28f913d3104"
+        "sha256": "baa2b7804ce84efdfb8ed1756b0b68446efaa9b534b10bf471e284b9fe00890a"
       },
       {
         "path": "ConflictClauseLattice.lean",
@@ -66,7 +66,7 @@
       },
       {
         "path": "ConflictClauseLattice/FinalProductTheorem.lean",
-        "sha256": "54cc6c716def8ea7baa0b37f5ef98841d91e323860d0cff2198af3fc3337e446"
+        "sha256": "2bcc16643d1f8901a4c1dda8c266250268ed37c21ca6183f60b77c1a8526217b"
       },
       {
         "path": "ConflictClauseLattice/HomologicalCertificate.lean",
@@ -78,15 +78,15 @@
       },
       {
         "path": "ConflictClauseLattice/StepCountingMonad.lean",
-        "sha256": "2e2f49b21c4f449c0a7ffe359776d1a62b612cdee3f094a55b1f23cebd223b96"
+        "sha256": "ebd9e57732b6116f96b2c66248b1bf7f60a870b318935c9496bf29bf524aa301"
       },
       {
         "path": "lake-manifest.json",
-        "sha256": "50e1f90e43d3e22d67f2a4093fc691098db3d57e8581ad33ca2796a088fa909c"
+        "sha256": "9d049f4c7fec321982e3e2de72d64a5e45c4f4f4c4fe8b214161d006a25fdfca"
       },
       {
         "path": "lakefile.lean",
-        "sha256": "0edd962286f53c2c0c60c4d0c88b24b5c070c2db4e84d01b1a3fbd26a2698262"
+        "sha256": "1ff3051cc1972d0a9cea3e245edb2971ebbe2b05a6b9b5191cc2d165270ef898"
       },
       {
         "path": "lean-toolchain",
@@ -100,11 +100,11 @@
     "reasons": [],
     "vacuity_warnings_in_build": 0
   },
-  "generated_at_utc": "2026-10-28T20:01:35+00:00",
+  "generated_at_utc": "2026-10-29T01:49:57+00:00",
   "signature": {
     "alg": "ed25519",
-    "public_key_b64": "lH+f7+wvxv8nPanYa5uCAkh32nWbVGgVppArvRVm1tI=",
+    "public_key_b64": "4KR00Ud771GwnZ+sW+xE/WzGRzpVO2REI9ir/zuBr8U=",
     "payload": "canonical JSON of report without 'signature' (sort_keys, compact, UTF-8)",
-    "value_b64": "svRztF+vO42iQE9E0725LGgkw78e4x/n7WAKZA9AdkTeNx6bMzuUVNt8bvRrHumSLBjQoeSzsL8SbHva0FcMCQ=="
+    "value_b64": "YIDY02yxTlHknaUj6OlEby8ykP0ztnBSxaXIVXFyL3whZXC1RR8A38yk765ikYCbF4CSDz9TDX5s4mU7f3y1AA=="
   }
 }

@@ -9,6 +9,8 @@ authors:
     affiliation: "Abstract AI Research Syndicate & Formal Methods Engineering Group"
 version: 1.0.0
 date-released: "2026-10-28"
+doi: "10.5281/zenodo.23747592"
+url: "https://doi.org/10.5281/zenodo.23747592"
 license: Apache-2.0
 keywords:
   - Exponential Time Hypothesis

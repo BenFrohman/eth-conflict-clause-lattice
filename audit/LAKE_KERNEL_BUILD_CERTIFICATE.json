@@ -1,0 +1,256 @@
+{
+  "schema": "Lean4-Lake-Kernel-Build-Certificate-v1.1",
+  "package": "ConflictClauseLattice (eth-conflict-clause-lattice)",
+  "version": "1.1.0",
+  "author": "Benjamin Stanley Frohman",
+  "orcid": "0009-0006-7068-3718",
+  "zenodo_doi": "10.5281/zenodo.23747592",
+  "timestamp_utc": "2026-10-29T01:46:16Z",
+  "toolchain": {
+    "lean_toolchain_file": "leanprover/lean4:v4.30.0-rc1",
+    "lean_version": "Lean (version 4.30.0-rc1, x86_64-unknown-linux-gnu, commit 229927b9d4c0, Release)",
+    "mathlib_version": "v4.30.0-rc1 (commit b392f2bc2a1e188c0f08b9eb2fefef2bbd5c9387)",
+    "lake_version": "Lake version 5.0.0-src+229927b (Lean version 4.30.0-rc1)",
+    "autoImplicit": false
+  },
+  "lake_build": {
+    "command": "lake build",
+    "exit_code": 0,
+    "jobs_completed": 1980,
+    "warnings": 0,
+    "errors": 0,
+    "status": "BUILD_SUCCESS"
+  },
+  "in_kernel_axiom_audit": {
+    "auditor_file": "AxiomAudit.lean",
+    "auditor_sha256": "baa2b7804ce84efdfb8ed1756b0b68446efaa9b534b10bf471e284b9fe00890a",
+    "command": "lake env lean AxiomAudit.lean",
+    "exit_code": 0,
+    "total_theorems_inspected": 68,
+    "sorry_ax_count": 0,
+    "trust_compiler_count": 0,
+    "nonstandard_axiom_count": 0,
+    "allowed_standard_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "observed_axioms_across_package": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "stdout_lines": [
+      "ConflictClauseLattice.HomologicalCertificate: theorems=18 nonstandard=0",
+      "ConflictClauseLattice.PosetLattice: theorems=25 nonstandard=0",
+      "ConflictClauseLattice.FinalProductTheorem: theorems=1 nonstandard=0",
+      "ConflictClauseLattice.StepCountingMonad: theorems=24 nonstandard=0",
+      "TOTAL theorems=68 nonstandard=0",
+      "'ConflictClauseLattice.card_allValidClauses3' does not depend on any axioms",
+      "'ConflictClauseLattice.layer0_count' does not depend on any axioms",
+      "'ConflictClauseLattice.layer1_count' does not depend on any axioms",
+      "'ConflictClauseLattice.layer2_count' does not depend on any axioms",
+      "'ConflictClauseLattice.layer3_count' does not depend on any axioms",
+      "'ConflictClauseLattice.layer_partition_sum_three' does not depend on any axioms",
+      "'ConflictClauseLattice.coveringEdges3_count' does not depend on any axioms",
+      "'ConflictClauseLattice.coveringEdges_by_layer' does not depend on any axioms",
+      "'ConflictClauseLattice.impliesPoset_refl' depends on axioms: [propext]",
+      "'ConflictClauseLattice.impliesPoset_trans' depends on axioms: [propext]",
+      "'ConflictClauseLattice.impliesPoset_antisymm' depends on axioms: [propext]",
+      "'ConflictClauseLattice.emptyClause3_minimal' does not depend on any axioms",
+      "'ConflictClauseLattice.clauseMeet_implies_left' depends on axioms: [propext]",
+      "'ConflictClauseLattice.clauseMeet_implies_right' depends on axioms: [propext]",
+      "'ConflictClauseLattice.implies_clauseMeet_iff' depends on axioms: [propext]",
+      "'ConflictClauseLattice.boundary1_comp_boundary2_eq_zero' depends on axioms: [propext, Quot.sound]",
+      "'ConflictClauseLattice.boundary2_comp_boundary3_eq_zero' depends on axioms: [propext, Quot.sound]",
+      "'ConflictClauseLattice.euler_poincare_L3' does not depend on any axioms",
+      "'ConflictClauseLattice.non_empty_euler_characteristic_L3' does not depend on any axioms",
+      "'ConflictClauseLattice.satisfiesClause_iff_not_implies_dualAtom' does not depend on any axioms",
+      "'ConflictClauseLattice.satisfiesFormula_eq_isUnobstructed_dualAtom' does not depend on any axioms",
+      "'ConflictClauseLattice.dualAtoms_eq_layer3' does not depend on any axioms",
+      "'ConflictClauseLattice.modelCount3_eq_unobstructedAtomCount3' depends on axioms: [propext]",
+      "'ConflictClauseLattice.tick_run' does not depend on any axioms",
+      "'ConflictClauseLattice.monad_reduction_two_ticks' does not depend on any axioms",
+      "'ConflictClauseLattice.simulateLatticeTraversal_run' depends on axioms: [propext]",
+      "'ConflictClauseLattice.simulateBlockHomologicalTraversal_run' depends on axioms: [propext]",
+      "'ConflictClauseLattice.state_injection_steps' depends on axioms: [propext]",
+      "'ConflictClauseLattice.lattice_traversal_complexity_bound' depends on axioms: [propext, Quot.sound]",
+      "'ConflictClauseLattice.lattice_traversal_steps_exact' depends on axioms: [propext, Quot.sound]",
+      "'ConflictClauseLattice.block_homological_traversal_bound' depends on axioms: [propext, Quot.sound]",
+      "'ConflictClauseLattice.subexponential_exponent_strictly_smaller' depends on axioms: [propext, Quot.sound]",
+      "'ConflictClauseLattice.eth_conflict_clause_lattice_master_product_theorem' depends on axioms: [propext,",
+      "Classical.choice,",
+      "Quot.sound]",
+      "'ConflictClauseLattice.exp_one_lt_three' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'ConflictClauseLattice.one_lt_log_nat_of_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'ConflictClauseLattice.logDenominator_gt_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'ConflictClauseLattice.subExponential_rpow_lt_two_pow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'ConflictClauseLattice.simulateLatticeTraversal_exceeds_subExponential_bound' depends on axioms: [propext,",
+      "Classical.choice,",
+      "Quot.sound]",
+      "'ConflictClauseLattice.block_homological_traversal_real_log_bound' depends on axioms: [propext,",
+      "Classical.choice,",
+      "Quot.sound]",
+      "'ConflictClauseLattice.simulateBlockHomologicalTraversal_at_logBlockSize_bound' depends on axioms: [propext,",
+      "Classical.choice,",
+      "Quot.sound]"
+    ],
+    "status": "KERNEL_AUDIT_PASS"
+  },
+  "modules": [
+    {
+      "module": "ConflictClauseLattice",
+      "source_path": "ConflictClauseLattice.lean",
+      "source_sha256": "cf5a0051cc9e70be5d102856b4f71e8aaf31d2d29187a2c9c6c7c66d77b6c027",
+      "source_size_bytes": 365,
+      "theorems_verified": 0,
+      "nonstandard_axioms": 0,
+      "kernel_axioms_used": [],
+      "compiled_artifacts": {
+        "olean": {
+          "path": ".lake/build/lib/lean/ConflictClauseLattice.olean",
+          "sha256": "5087c3cd925f92bda1ea488ca1e7547b73233bb805772ade999831205bf1d09e",
+          "size_bytes": 1680
+        },
+        "ilean": {
+          "path": ".lake/build/lib/lean/ConflictClauseLattice.ilean",
+          "sha256": "7fd70b5b9332ffd927dfdd110924af0339d86f92d0cdf1462c8a5f6648e452ad",
+          "size_bytes": 341
+        },
+        "c_ir": {
+          "path": ".lake/build/ir/ConflictClauseLattice.c",
+          "sha256": "55354d96d34c5483438c60da35efc8fd25ea2c162adfc2ba5ab4821ddd8a5f85",
+          "size_bytes": 2199
+        }
+      }
+    },
+    {
+      "module": "ConflictClauseLattice.PosetLattice",
+      "source_path": "ConflictClauseLattice/PosetLattice.lean",
+      "source_sha256": "f1f39e6c8197e249f906ad6166092430d0f30ed10c6fbedbc368abe0f0f30ad3",
+      "source_size_bytes": 10284,
+      "theorems_verified": 25,
+      "nonstandard_axioms": 0,
+      "kernel_axioms_used": [
+        "propext"
+      ],
+      "compiled_artifacts": {
+        "olean": {
+          "path": ".lake/build/lib/lean/ConflictClauseLattice/PosetLattice.olean",
+          "sha256": "0a29bd827815a20443836621b67d4baf469c46386f0a8045ac2009ee46fd674f",
+          "size_bytes": 405288
+        },
+        "ilean": {
+          "path": ".lake/build/lib/lean/ConflictClauseLattice/PosetLattice.ilean",
+          "sha256": "7780bd3003bc7f27ff8dc62f04315f0b16bcf7577b1582209337775f5e1071bd",
+          "size_bytes": 27128
+        },
+        "c_ir": {
+          "path": ".lake/build/ir/ConflictClauseLattice/PosetLattice.c",
+          "sha256": "3c97559cd53a6200c47b3f63082e8dbda721682e414b14f56523dc1a54980f9f",
+          "size_bytes": 68890
+        }
+      }
+    },
+    {
+      "module": "ConflictClauseLattice.HomologicalCertificate",
+      "source_path": "ConflictClauseLattice/HomologicalCertificate.lean",
+      "source_sha256": "a99dcbac440a0d8814495e1543bbdfe5c48a2d6c02157476bb61c04f9736943d",
+      "source_size_bytes": 7752,
+      "theorems_verified": 18,
+      "nonstandard_axioms": 0,
+      "kernel_axioms_used": [
+        "propext",
+        "Quot.sound"
+      ],
+      "compiled_artifacts": {
+        "olean": {
+          "path": ".lake/build/lib/lean/ConflictClauseLattice/HomologicalCertificate.olean",
+          "sha256": "2cfac5c5134a9f4f41c56477eabf29d276728fed18c7c14108516a28d81acd02",
+          "size_bytes": 400416
+        },
+        "ilean": {
+          "path": ".lake/build/lib/lean/ConflictClauseLattice/HomologicalCertificate.ilean",
+          "sha256": "c73a3cf8e6fba39b141347437bedfc9b65907cb2081a80e0caec6d2c9edff39f",
+          "size_bytes": 23324
+        },
+        "c_ir": {
+          "path": ".lake/build/ir/ConflictClauseLattice/HomologicalCertificate.c",
+          "sha256": "d3b994d43a6dc2d5f7706f78be3de62d7f554566a557a445d698eecf5eb6e90c",
+          "size_bytes": 82793
+        }
+      }
+    },
+    {
+      "module": "ConflictClauseLattice.StepCountingMonad",
+      "source_path": "ConflictClauseLattice/StepCountingMonad.lean",
+      "source_sha256": "ebd9e57732b6116f96b2c66248b1bf7f60a870b318935c9496bf29bf524aa301",
+      "source_size_bytes": 14193,
+      "theorems_verified": 24,
+      "nonstandard_axioms": 0,
+      "kernel_axioms_used": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "compiled_artifacts": {
+        "olean": {
+          "path": ".lake/build/lib/lean/ConflictClauseLattice/StepCountingMonad.olean",
+          "sha256": "04af3c98e1619742c3b7f7de1ba32758fcf5982f92e1cc0fb4051fe2cca04a8f",
+          "size_bytes": 515768
+        },
+        "ilean": {
+          "path": ".lake/build/lib/lean/ConflictClauseLattice/StepCountingMonad.ilean",
+          "sha256": "104d78188bd7f5add09f9d7c45369db5a06bbed70fad90cd28f24ad18d2ccd29",
+          "size_bytes": 34306
+        },
+        "c_ir": {
+          "path": ".lake/build/ir/ConflictClauseLattice/StepCountingMonad.c",
+          "sha256": "9a7bb9d77689dfd04215c411bb3cd0ccb424cb9f466c78421bb7441cda044ec3",
+          "size_bytes": 24136
+        }
+      }
+    },
+    {
+      "module": "ConflictClauseLattice.FinalProductTheorem",
+      "source_path": "ConflictClauseLattice/FinalProductTheorem.lean",
+      "source_sha256": "2bcc16643d1f8901a4c1dda8c266250268ed37c21ca6183f60b77c1a8526217b",
+      "source_size_bytes": 5549,
+      "theorems_verified": 1,
+      "nonstandard_axioms": 0,
+      "kernel_axioms_used": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "compiled_artifacts": {
+        "olean": {
+          "path": ".lake/build/lib/lean/ConflictClauseLattice/FinalProductTheorem.olean",
+          "sha256": "4cbd829f0ec72f8e793eb77fc8e04f82f163dfeaa0ce518ad99a0751af1bf116",
+          "size_bytes": 40640
+        },
+        "ilean": {
+          "path": ".lake/build/lib/lean/ConflictClauseLattice/FinalProductTheorem.ilean",
+          "sha256": "a561710ee256ae50216c81825c51bedf1d1221c5d760e5f849516e137ddde792",
+          "size_bytes": 17426
+        },
+        "c_ir": {
+          "path": ".lake/build/ir/ConflictClauseLattice/FinalProductTheorem.c",
+          "sha256": "d64409ea618ceacd8af3a57b991bba605d6dea8b70b62caf0a63007ec11a1446",
+          "size_bytes": 1921
+        }
+      }
+    }
+  ],
+  "mathematical_scope_statement": {
+    "formally_proved_in_lean": [
+      "Finite graded conflict-clause poset L_3 (27 clauses across Layers 0, 1, 2, 3; 54 covering edges; reflexivity, transitivity, antisymmetry of implication order; bounded meet-semilattice laws in ConflictClauseLattice/PosetLattice.lean, 25 theorems).",
+      "Cellular chain complex over Z (boundary_1 o boundary_2 = 0, boundary_2 o boundary_3 = 0, Euler-Poincare identity 1 - 6 + 12 - 8 = -1, and exact #3-SAT unobstructed dual-atom bijection in ConflictClauseLattice/HomologicalCertificate.lean, 18 theorems).",
+      "Pure functional step-counting monad (CountM := StateM CountingState) with tick transitions, Monad Reduction (simp [Bind.bind, StateT.bind]), State Injection (injection), discrete Presburger arithmetic step bounds (omega) for simulateLatticeTraversal (<= n^2 + 2^n) and simulateBlockHomologicalTraversal (<= (n+m)^2 + 2^(n/max(k,1))), and real-valued sub-exponential bounds over Real using Mathlib's Real.log and Real.rpow (block_homological_traversal_real_log_bound, simulateBlockHomologicalTraversal_at_logBlockSize_bound, subExponential_rpow_lt_two_pow, and simulateLatticeTraversal_exceeds_subExponential_bound in ConflictClauseLattice/StepCountingMonad.lean, 24 theorems).",
+      "Master 5-pillar conjunction theorem (eth_conflict_clause_lattice_master_product_theorem in ConflictClauseLattice/FinalProductTheorem.lean, 1 theorem)."
+    ],
+    "model_assumptions_and_boundaries": [
+      "The CountM step-counting monad tracks exact tick counts of pure functional Lean cost models (simulateLatticeTraversal and simulateBlockHomologicalTraversal parameterized by (n, m, blockK)); it does not measure physical wall-clock runtime or compiler-emitted machine instructions, and does not prove an unconditional block-rank decomposition for arbitrary coupled n-variable 3-CNF boundary matrices."
+    ]
+  }
+}

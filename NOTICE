@@ -1,6 +1,8 @@
-Fefferman Clay Periodic Navier-Stokes Formalization in Lean 4
+ConflictClauseLattice — Lean 4 Formalization and Manuscript Package
 Copyright (c) 2026 Benjamin Stanley Frohman (ORCID: 0009-0006-7068-3718). All rights reserved.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
 
-This product includes software and formal mathematical proofs developed by
-Benjamin Stanley Frohman, verified with Titan Audit (DOI: 10.5281/zenodo.23630648),
-SealGuard (DOI: 10.5281/zenodo.23631670), and Sentinel Gate (DOI: 10.5281/zenodo.23632766).
+Attribution & Prior-Art Notice:
+This repository and its Lean 4 formalization build upon the author's prior-art Lean 4 formalization
+and algorithmic complexity archives (May–October 2026), including DOI: 10.5281/zenodo.23629499,
+DOI: 10.5281/zenodo.23627610, and DOI: 10.5281/zenodo.23629474.

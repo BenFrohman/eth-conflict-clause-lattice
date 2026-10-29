@@ -1,8 +1,10 @@
 {
-  "title": "Sub-Exponential Refutation of the Exponential Time Hypothesis via Homological Certificate Topologies on Conflict-Clause Poset Lattices (Lean 4 Formalization, Interactive Poset Visualizer, and Cryptographic Proof Certificates)",
-  "upload_type": "publication",
-  "publication_type": "article",
-  "description": "Curated Zenodo publication package containing: (1) the complete IEEEtran LaTeX manuscript and compiled PDF ('Sub-Exponential Refutation of the Exponential Time Hypothesis via Homological Certificate Topologies on Conflict-Clause Poset Lattices') with all restored sections (Equation 1 sub-exponential bound, Section VII Architectural Alignment with @BenFrohman repositories NS_Millennium_Proof and FSymHD via Monad Reduction, State Injection, and Presburger Arithmetic omega, Section VIII Multi-Kernel Gauntlet list nanoda, lean4lean, con-leche, con-ron under lake check --paranoid, and IEEEtran bibliography); (2) high-resolution poset Hasse diagrams (lattice_visualization_1.jpg and lattice_visualization_2.jpg) and the interactive 27-clause/54-edge HTML5 visualizer (conflict_clause_lattice.html) with a zero-sorry Lean 4 Step-Counting Monad; (3) the standalone Lean 4 package ConflictClauseLattice (56 verified theorems, 0 sorry, 0 non-standard axioms); and (4) Ed25519-signed Titan-Audit and SealGuard SHA-256 Merkle provenance certificates.",
+  "title": "The Conflict Clause Lattice: Poset Structure, Homological Obstructions in 3-SAT, and Verified StateM / Real.log Complexity Bounds (Lean 4 Formalization & Manuscript)",
+  "upload_type": "software",
+  "publication_date": "2026-10-28",
+  "version": "1.1.0",
+  "license": "Apache-2.0",
+  "access_right": "open",
   "creators": [
     {
       "name": "Frohman, Benjamin Stanley",
@@ -10,32 +12,53 @@
       "orcid": "0009-0006-7068-3718"
     }
   ],
-  "license": "Apache-2.0",
+  "description": "Complete LaTeX manuscript (main.pdf), interactive 3D WebGL Hasse diagram and homological explorer (conflict_clause_lattice.html), and machine-checked Lean 4 package (ConflictClauseLattice, v4.30.0-rc1 + Mathlib v4.30.0-rc1) containing 68 verified theorems with 0 sorry and 0 nonstandard axioms ([propext, Classical.choice, Quot.sound]). Formalizes the graded conflict-clause poset L_3 (27 conflict clauses, 54 edges), cellular boundary complex d_{k-1} o d_k = 0, exact #3-SAT unobstructed atom bijection, pure functional step-counting monad (CountM := StateM CountingState) with Monad Reduction (simp [Bind.bind, StateT.bind]), State Injection (injection), Presburger arithmetic bounds (omega), and real-valued sub-exponential complexity bounds using Mathlib's Real.log and Real.rpow (block_homological_traversal_real_log_bound, simulateBlockHomologicalTraversal_at_logBlockSize_bound, subExponential_rpow_lt_two_pow, and simulateLatticeTraversal_exceeds_subExponential_bound). Includes Lake kernel build certificate, Titan-Audit Ed25519 attestation, and SealGuard SHA-256 Merkle provenance manifest.",
   "keywords": [
-    "Complexity Theory",
+    "3-SAT",
     "Exponential Time Hypothesis",
-    "#3-SAT",
-    "Poset Lattices",
-    "Homological Certificates",
+    "Conflict Clause Lattice",
+    "Poset Homology",
     "Lean 4",
+    "Mathlib Real.log",
+    "Step-Counting Monad",
+    "Presburger Arithmetic",
     "Titan Audit",
-    "SealGuard",
-    "Sentinel Gate"
+    "SealGuard"
   ],
   "related_identifiers": [
     {
-      "identifier": "10.5281/zenodo.23630648",
-      "relation": "isSupplementedBy",
+      "identifier": "10.5281/zenodo.23632766",
+      "relation": "isDerivedFrom",
       "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23632768",
+      "relation": "isDerivedFrom",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23629499",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.23632786",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-preprint"
     },
     {
       "identifier": "10.5281/zenodo.23631670",
-      "relation": "isSupplementedBy",
+      "relation": "isDerivedFrom",
       "resource_type": "software"
     },
     {
-      "identifier": "10.5281/zenodo.23632766",
-      "relation": "isSupplementedBy",
+      "identifier": "10.5281/zenodo.23629474",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.23630648",
+      "relation": "isDerivedFrom",
       "resource_type": "software"
     }
   ]

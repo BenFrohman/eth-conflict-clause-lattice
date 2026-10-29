@@ -1,26 +1,35 @@
 {
-  "schema_version": "1.0.0",
-  "architecture": "SealGuard 4-Plane Cryptographic Containment & Provenance (DOI: 10.5281/zenodo.23631670)",
-  "policy_gate": {
-    "engine": "Sentinel Gate v1.0.0 (DOI: 10.5281/zenodo.23632766)",
-    "author": "Benjamin Stanley Frohman (ORCID: 0009-0006-7068-3718)",
-    "action_type": "seal_and_attest_public_release",
-    "action_id": "6c4dc8976b9ea256d457851ae49f504b739a13f494c6eda6f2769b8d5b34b926",
-    "permitted": true,
-    "reason": "PERMITTED_DETERMINISTIC_POLICY",
-    "receipt_sha256": "c8e17cec2c8049687f6d14dc921023379ebcc93117d7bbcb7970a8453ecd31f5"
+  "schema": "SealGuard-Provenance-Manifest-v1.0",
+  "classification": "PUBLIC_VERIFIABLE_PROVENANCE_ATTESTATION",
+  "originator": "Benjamin Stanley Frohman (ORCID: 0009-0006-7068-3718)",
+  "zenodo_doi": "10.5281/zenodo.23747592",
+  "timestamp_utc": "2026-10-29T01:50:13Z",
+  "merkle_root_sha256": "aee441abb7364ee81aefc3c9f47e9ffa2883d05bbf56f906db817bbc39ec7ba4",
+  "hmac_sha256_seal": "76a0a73c4caf52722ecb510fd1f737fde4a407df366a1bf71112919ec47aa8e7",
+  "lean_kernel_verification": {
+    "toolchain": "leanprover/lean4:v4.30.0-rc1",
+    "mathlib": "v4.30.0-rc1",
+    "theorems_verified": 68,
+    "sorry_count": 0,
+    "nonstandard_axioms": 0,
+    "allowed_standard_axioms_used": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
   },
-  "author": {
-    "name": "Benjamin Stanley Frohman",
-    "orcid": "0009-0006-7068-3718"
-  },
-  "repository": "eth-conflict-clause-lattice",
-  "public_merkle_root_sha256": "6c4dc8976b9ea256d457851ae49f504b739a13f494c6eda6f2769b8d5b34b926",
-  "classified_ip_containment": {
-    "plane": "Plane-4 Encrypted Parameterization Capsule",
-    "plaintext_commitment_sha256": "6635b206d66662182bd905437af438023d234de7b95501d875ccfd0dc3e3ff45",
-    "ciphertext_hex": "0a561739b470179db65300b7cc33608d21c7a424e3578d490498fd060a969ec535aea35471b956a355dcb0fc3d0eba785e85bb70e7aa4050f1d0673b9e9bb264e15d1b7cdc02470bbc69fe526a460e598e8287b2e9ee09fefc77a7d1659357ee82339e13463f2483f1aa21a56c9c8ac5fcb7e8a342635d70bbebb815636436c3decb656f1176495a66ce889707c4c62bbda52f78b09916b7b253f7e3a02124fb1b1f22f137670681f0279f95b0d3aa977e6c7ff897170fd0a727896b79ffbe63c12d8333013622feeb1bc43b5e38ff5d792d12493e67eaee7e51bffd18acd6c5cd14ee278e4ddaf0061fc358b9ac8b683bf6a5e0cd4e076128c016875dbbc337295c30cab992b451ca2ff6a64fc642395715c88a46e3f0f81229dd9089c87298d3dccd215278f85702b51ff80641ba915a7505f8ea97596ac086c37f1b3f11b2004878c0bd9a9565cd25f3001e83b97297fed27d180331d8",
-    "hmac_sha256_tag": "b038cbb788eec92aa0fe32049c7032e7976f70f3b61fb2f71d504466f6b5d998",
-    "key_custody": "External vault key (/workspace/ip_vault_keys/) \u2014 never committed to repository"
+  "sentinel_gate_receipt": {
+    "protocol": "Sentinel-Gate-v1.0",
+    "policy_status": "ENFORCED_PASS",
+    "capabilities_verified": [
+      "zero_sorry_in_lean_sources",
+      "zero_nonstandard_axioms",
+      "autoImplicit_false_enforced",
+      "titan_audit_ed25519_verified",
+      "prior_art_timeline_attested"
+    ],
+    "merkle_root_bound": "aee441abb7364ee81aefc3c9f47e9ffa2883d05bbf56f906db817bbc39ec7ba4",
+    "hmac_sha256_receipt": "76a0a73c4caf52722ecb510fd1f737fde4a407df366a1bf71112919ec47aa8e7",
+    "timestamp_utc": "2026-10-29T01:50:13Z"
   }
 }

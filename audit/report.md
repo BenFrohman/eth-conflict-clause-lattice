@@ -2,19 +2,19 @@
 
 **Verdict: PASS**
 
-- Generated (UTC): 2026-10-28T20:01:35+00:00
+- Generated (UTC): 2026-10-29T01:49:57+00:00
 - Tool: titan-audit 1.0.0 (Benjamin Stanley Frohman (ORCID: 0009-0006-7068-3718))
-- Toolchain: `leanprover/lean4:v4.30.0-rc1`  Git HEAD: `f75610e3d1d53701d750801d850c72cd9c86df8d`
-- Tree SHA-256: `21a8eb9d03dcf39258a14f1aeb8b5025ab81bfe1ecbdfa333903f410c7240145` over 9 files
+- Toolchain: `leanprover/lean4:v4.30.0-rc1`  Git HEAD: `e06725246e557aadda69297fc8f638fceba9d125`
+- Tree SHA-256: `b96bbdae6fc2877179dbb45cc53c468f6474abbdfd298f1348ed0d115db90b62` over 9 files
 
 ## Build
 
-- Success: True  Jobs: 7  Errors: 0
+- Success: True  Jobs: 1980  Errors: 0
 - `sorry` warnings: 0  Unused-variable warnings: 0
 
 ## Axiom audit
 
-- Modules: 5  Theorems: 56  Clean (only propext/Classical.choice/Quot.sound): 56
+- Modules: 5  Theorems: 68  Clean (only propext/Classical.choice/Quot.sound): 68
 - Nonstandard: 0
 
 | Module | Theorems | Nonstandard |
@@ -22,7 +22,7 @@
 | `ConflictClauseLattice.FinalProductTheorem` | 1 | 0 |
 | `ConflictClauseLattice.HomologicalCertificate` | 18 | 0 |
 | `ConflictClauseLattice.PosetLattice` | 25 | 0 |
-| `ConflictClauseLattice.StepCountingMonad` | 12 | 0 |
+| `ConflictClauseLattice.StepCountingMonad` | 24 | 0 |
 
 ## Source scan
 
@@ -37,5 +37,5 @@ Heuristics are advisory: a flag means *look here*, not *wrong*.
 
 ## Signature
 
-- ed25519 public key (base64): `lH+f7+wvxv8nPanYa5uCAkh32nWbVGgVppArvRVm1tI=`
+- ed25519 public key (base64): `4KR00Ud771GwnZ+sW+xE/WzGRzpVO2REI9ir/zuBr8U=`
 - Verify: `titan-audit verify report.json`

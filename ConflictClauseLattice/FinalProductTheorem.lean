@@ -21,9 +21,12 @@ namespace ConflictClauseLattice
            `∂₁(∂₂(σ)) = 0` on all 2-simplices and `∂₂(∂₃(τ)) = 0` on all 3-simplices, with Euler characteristic `χ(L₃) = 1 - 6 + 12 - 8 = -1`.
     - (P₄) Exact Homological Atom Duality for `#3-SAT`:
            for every formula `Φ`, `#3-SAT(Φ)` (`modelCount3 Φ`) equals the exact count of unobstructed Layer-3 atoms (`unobstructedAtomCount3 Φ`).
-    - (P₅) Step-Counting Monad Reduction, State Injection, and Presburger (`omega`) Complexity Bounds:
-           `simulateLatticeTraversal` executes in `≤ n² + 2ⁿ` steps and `simulateBlockHomologicalTraversal` executes in
-           `≤ (n + m)² + 2^(n / max k 1)` steps with strict exponent compression `n / k < n` for `n, k ≥ 2`. -/
+    - (P₅) Step-Counting Monad Reduction, State Injection, Presburger (`omega`), and Real-Analytic (`Real.log` / `Real.rpow`) Complexity Bounds:
+           `simulateLatticeTraversal` executes in `≤ n² + 2ⁿ` steps, `simulateBlockHomologicalTraversal` executes in
+           `≤ (n + m)² + 2^(n / max k 1)` steps with discrete compression `n / k < n` for `n, k ≥ 2`, and at
+           `blockK = logBlockSize n ε = ⌈(Real.log n)^(1/2 + ε)⌉` satisfies the real-valued bound
+           `(finalState.steps : ℝ) ≤ (n + m)² + 2^(n / (Real.log n)^(1/2 + ε))` with strict sub-exponential inequality
+           `2^(n / (Real.log n)^(1/2 + ε)) < 2^n` for `n ≥ 3` and `0 ≤ ε`. -/
 theorem eth_conflict_clause_lattice_master_product_theorem :
     -- (P₁) Stratified Poset Lattice & Hasse Covering Counts
     (allValidClauses3.length = 27 ∧
@@ -45,19 +48,28 @@ theorem eth_conflict_clause_lattice_master_product_theorem :
        ((clausesOfRank3 2).length : Int) - ((clausesOfRank3 3).length : Int) = -1) ∧
     -- (P₄) Exact Bijection Between #3-SAT(Φ) Model Count and Unobstructed Lattice Atoms
     (∀ Φ : List ValidClause3, modelCount3 Φ = unobstructedAtomCount3 Φ) ∧
-    -- (P₅) Step-Counting Monad Complexity Bounds & Exponent Compression
+    -- (P₅) Step-Counting Monad Complexity Bounds (Discrete & Real-Analytic Mathlib `Real.log` Bounds)
     ((∀ (n : Nat) (res : Bool) (finalState : CountingState) (_Traverse : CountM Bool) (_runM : CountingState),
         (simulateLatticeTraversal n).run { steps := 0 } = (res, finalState) →
         finalState.steps ≤ n ^ 2 + 2 ^ n) ∧
      (∀ (n m blockK : Nat) (res : Bool) (finalState : CountingState),
         (simulateBlockHomologicalTraversal n m blockK).run { steps := 0 } = (res, finalState) →
         finalState.steps ≤ (n + m) ^ 2 + 2 ^ (n / Nat.max blockK 1)) ∧
-     (∀ (n blockK : Nat), n ≥ 2 → blockK ≥ 2 → n / blockK < n)) := by
+     (∀ (n blockK : Nat), n ≥ 2 → blockK ≥ 2 → n / blockK < n) ∧
+     (∀ (n m : Nat) (ε : ℝ) (res : Bool) (finalState : CountingState),
+        n ≥ 2 →
+        (simulateBlockHomologicalTraversal n m (logBlockSize n ε)).run { steps := 0 } = (res, finalState) →
+        (finalState.steps : ℝ) ≤ ((n + m : ℝ) ^ 2) + (2 : ℝ) ^ ((n : ℝ) / (Real.log (n : ℝ)) ^ ((1 : ℝ) / 2 + ε))) ∧
+     (∀ (n : Nat) (ε : ℝ),
+        n ≥ 3 → 0 ≤ ε →
+        (2 : ℝ) ^ ((n : ℝ) / logDenominator n ε) < (2 : ℝ) ^ (n : ℝ))) := by
   refine ⟨?_, ?_, ?_, ?_, ?_⟩
   · exact ⟨card_allValidClauses3, layer0_count, layer1_count, layer2_count, layer3_count, coveringEdges3_count⟩
   · exact ⟨impliesPoset_refl, impliesPoset_antisymm, impliesPoset_trans, emptyClause3_minimal, implies_clauseMeet_iff⟩
   · exact ⟨boundary1_comp_boundary2_eq_zero, boundary2_comp_boundary3_eq_zero, euler_poincare_L3⟩
   · exact modelCount3_eq_unobstructedAtomCount3
-  · exact ⟨lattice_traversal_complexity_bound, block_homological_traversal_bound, subexponential_exponent_strictly_smaller⟩
+  · exact ⟨lattice_traversal_complexity_bound, block_homological_traversal_bound,
+           subexponential_exponent_strictly_smaller, simulateBlockHomologicalTraversal_at_logBlockSize_bound,
+           fun n ε hn hε => subExponential_rpow_lt_two_pow hn hε⟩
 
 end ConflictClauseLattice

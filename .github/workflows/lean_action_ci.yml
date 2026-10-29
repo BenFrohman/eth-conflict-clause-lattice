@@ -1,0 +1,15 @@
+name: Lean 4 Kernel Build & AxiomAudit
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  build:
+    name: Lean 4 Kernel Build & AxiomAudit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+      - name: Run In-Kernel Axiom Audit
+        run: lake env lean AxiomAudit.lean
