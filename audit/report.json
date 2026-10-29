@@ -6,27 +6,21 @@
     "doi": "10.5281/zenodo.23630648"
   },
   "project": {
-    "path": ".",
+    "path": "/workspace/eth-conflict-clause-lattice",
     "name": "eth-conflict-clause-lattice",
     "lean_toolchain": "leanprover/lean4:v4.30.0-rc1",
-    "git_head": "e06725246e557aadda69297fc8f638fceba9d125"
+    "git_head": "05507e1f057eee1fa455a831290baee00991db57"
   },
   "build": {
-    "requested": true,
-    "exit_code": 0,
-    "success": true,
-    "jobs": 1980,
-    "errors": [],
-    "sorry_warnings": 0,
-    "unused_variable_warnings": []
+    "requested": false
   },
   "axiom_audit": {
     "ran": true,
     "exit_code": 0,
     "errors": [],
     "modules": 5,
-    "theorems": 68,
-    "clean_theorems": 68,
+    "theorems": 69,
+    "clean_theorems": 69,
     "nonstandard": [],
     "per_module": {
       "ConflictClauseLattice.PosetLattice": {
@@ -34,7 +28,7 @@
         "nonstandard": 0
       },
       "ConflictClauseLattice.StepCountingMonad": {
-        "theorems": 24,
+        "theorems": 25,
         "nonstandard": 0
       },
       "ConflictClauseLattice.HomologicalCertificate": {
@@ -53,12 +47,12 @@
     "counts": {}
   },
   "tree": {
-    "sha256": "b96bbdae6fc2877179dbb45cc53c468f6474abbdfd298f1348ed0d115db90b62",
+    "sha256": "912e0df6d91c91b294437f4fad51f34276cded7b8993744c66a6fc17a308c15b",
     "files": 9,
     "entries": [
       {
         "path": "AxiomAudit.lean",
-        "sha256": "baa2b7804ce84efdfb8ed1756b0b68446efaa9b534b10bf471e284b9fe00890a"
+        "sha256": "4f7eb8b02c429590a89b33f0efc885c2dd886e158c166a59f1cdc233268ba5a2"
       },
       {
         "path": "ConflictClauseLattice.lean",
@@ -78,7 +72,7 @@
       },
       {
         "path": "ConflictClauseLattice/StepCountingMonad.lean",
-        "sha256": "ebd9e57732b6116f96b2c66248b1bf7f60a870b318935c9496bf29bf524aa301"
+        "sha256": "5d04e4bfd76a56f3c8cb9814b2150ee555cfa866c670a932fdaf303429d42c70"
       },
       {
         "path": "lake-manifest.json",
@@ -100,11 +94,11 @@
     "reasons": [],
     "vacuity_warnings_in_build": 0
   },
-  "generated_at_utc": "2026-10-29T01:49:57+00:00",
+  "generated_at_utc": "2026-10-29T22:33:50+00:00",
   "signature": {
     "alg": "ed25519",
-    "public_key_b64": "4KR00Ud771GwnZ+sW+xE/WzGRzpVO2REI9ir/zuBr8U=",
+    "public_key_b64": "lH+f7+wvxv8nPanYa5uCAkh32nWbVGgVppArvRVm1tI=",
     "payload": "canonical JSON of report without 'signature' (sort_keys, compact, UTF-8)",
-    "value_b64": "YIDY02yxTlHknaUj6OlEby8ykP0ztnBSxaXIVXFyL3whZXC1RR8A38yk765ikYCbF4CSDz9TDX5s4mU7f3y1AA=="
+    "value_b64": "CTQdTczlw4xRlMyZtODLQM94mBSfylS25bAcPQ0Qobe97cJsKnQowrJC4ofYueONL5uuspHO140hLcZi+s2nDA=="
   }
 }

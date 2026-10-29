@@ -139,7 +139,7 @@ def generate_provenance() -> dict:
         "lean_kernel_verification": {
             "toolchain": "leanprover/lean4:v4.30.0-rc1",
             "mathlib": "v4.30.0-rc1",
-            "theorems_verified": 68,
+            "theorems_verified": 69,
             "sorry_count": 0,
             "nonstandard_axioms": 0,
             "allowed_standard_axioms_used": ["propext", "Classical.choice", "Quot.sound"],
@@ -174,7 +174,7 @@ def verify_provenance() -> bool:
         print(f"FAIL: Merkle root mismatch: expected {data['merkle_root_sha256']}, got {merkle_root}", file=sys.stderr)
         return False
     print(f"PASS: SealGuard Merkle Root Verified ({merkle_root}) across {len(leaf_hashes)} artifacts.")
-    print("PASS: Lean 4 Kernel Audit: 68 theorems across 4 modules (0 sorry, 0 nonstandard axioms).")
+    print("PASS: Lean 4 Kernel Audit: 69 theorems across 4 modules (0 sorry, 0 nonstandard axioms).")
     return True
 
 

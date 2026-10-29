@@ -6,6 +6,7 @@ Authors: Benjamin Stanley Frohman
 
 import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
+import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 
 namespace ConflictClauseLattice
 
@@ -284,5 +285,29 @@ theorem simulateBlockHomologicalTraversal_at_logBlockSize_bound
     (finalState.steps : ℝ) ≤ ((n + m : ℝ) ^ 2) + (2 : ℝ) ^ ((n : ℝ) / (Real.log (n : ℝ)) ^ ((1 : ℝ) / 2 + ε)) := by
   exact block_homological_traversal_real_log_bound n m (logBlockSize n ε) ε res finalState
     hn (logBlockSize_ge_one hn ε) (logDenominator_le_logBlockSize n ε) hrun
+
+/-- Real-valued complexity denominator `(log n)^(1/2 + o(n))` with a perturbation `o`. -/
+noncomputable def complexityDenominator (n : ℝ) (o : ℝ → ℝ) : ℝ :=
+  (Real.log n) ^ ((1 : ℝ) / 2 + o n)
+
+/-- Denominator Divergence: if `o = o(1)` as `n → ∞`, then `(log n)^(1/2 + o(n)) → ∞`. -/
+theorem denominator_divergence (o : ℝ → ℝ)
+    (ho : Asymptotics.IsLittleO Filter.atTop o (fun _ => (1 : ℝ))) :
+    Filter.Tendsto (fun n => complexityDenominator n o) Filter.atTop Filter.atTop := by
+  have ho0 : Filter.Tendsto o Filter.atTop (nhds 0) :=
+    (Asymptotics.isLittleO_one_iff ℝ).mp ho
+  have hexp : ∀ᶠ n in Filter.atTop, (1 : ℝ) / 4 ≤ (1 : ℝ) / 2 + o n := by
+    filter_upwards [ho0.eventually (Ioo_mem_nhds (show (-(1 : ℝ) / 4) < 0 by norm_num)
+      (show (0 : ℝ) < 1 by norm_num))] with n hn
+    have := hn.1
+    linarith
+  have hlog : ∀ᶠ n in Filter.atTop, (1 : ℝ) ≤ Real.log n :=
+    Real.tendsto_log_atTop.eventually_ge_atTop 1
+  have hlim : Filter.Tendsto (fun n : ℝ => (Real.log n) ^ ((1 : ℝ) / 4)) Filter.atTop Filter.atTop :=
+    (tendsto_rpow_atTop (by norm_num : (0 : ℝ) < 1 / 4)).comp Real.tendsto_log_atTop
+  refine Filter.tendsto_atTop_mono' Filter.atTop ?_ hlim
+  filter_upwards [hexp, hlog] with n he hl
+  unfold complexityDenominator
+  exact Real.rpow_le_rpow_of_exponent_le hl he
 
 end ConflictClauseLattice

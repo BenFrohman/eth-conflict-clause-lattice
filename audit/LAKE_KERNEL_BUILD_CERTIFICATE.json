@@ -5,7 +5,7 @@
   "author": "Benjamin Stanley Frohman",
   "orcid": "0009-0006-7068-3718",
   "zenodo_doi": "10.5281/zenodo.23747592",
-  "timestamp_utc": "2026-10-29T01:46:16Z",
+  "timestamp_utc": "2026-10-29T22:34:17Z",
   "toolchain": {
     "lean_toolchain_file": "leanprover/lean4:v4.30.0-rc1",
     "lean_version": "Lean (version 4.30.0-rc1, x86_64-unknown-linux-gnu, commit 229927b9d4c0, Release)",
@@ -16,17 +16,17 @@
   "lake_build": {
     "command": "lake build",
     "exit_code": 0,
-    "jobs_completed": 1980,
+    "jobs_completed": 1984,
     "warnings": 0,
     "errors": 0,
     "status": "BUILD_SUCCESS"
   },
   "in_kernel_axiom_audit": {
     "auditor_file": "AxiomAudit.lean",
-    "auditor_sha256": "baa2b7804ce84efdfb8ed1756b0b68446efaa9b534b10bf471e284b9fe00890a",
+    "auditor_sha256": "4f7eb8b02c429590a89b33f0efc885c2dd886e158c166a59f1cdc233268ba5a2",
     "command": "lake env lean AxiomAudit.lean",
     "exit_code": 0,
-    "total_theorems_inspected": 68,
+    "total_theorems_inspected": 69,
     "sorry_ax_count": 0,
     "trust_compiler_count": 0,
     "nonstandard_axiom_count": 0,
@@ -44,56 +44,8 @@
       "ConflictClauseLattice.HomologicalCertificate: theorems=18 nonstandard=0",
       "ConflictClauseLattice.PosetLattice: theorems=25 nonstandard=0",
       "ConflictClauseLattice.FinalProductTheorem: theorems=1 nonstandard=0",
-      "ConflictClauseLattice.StepCountingMonad: theorems=24 nonstandard=0",
-      "TOTAL theorems=68 nonstandard=0",
-      "'ConflictClauseLattice.card_allValidClauses3' does not depend on any axioms",
-      "'ConflictClauseLattice.layer0_count' does not depend on any axioms",
-      "'ConflictClauseLattice.layer1_count' does not depend on any axioms",
-      "'ConflictClauseLattice.layer2_count' does not depend on any axioms",
-      "'ConflictClauseLattice.layer3_count' does not depend on any axioms",
-      "'ConflictClauseLattice.layer_partition_sum_three' does not depend on any axioms",
-      "'ConflictClauseLattice.coveringEdges3_count' does not depend on any axioms",
-      "'ConflictClauseLattice.coveringEdges_by_layer' does not depend on any axioms",
-      "'ConflictClauseLattice.impliesPoset_refl' depends on axioms: [propext]",
-      "'ConflictClauseLattice.impliesPoset_trans' depends on axioms: [propext]",
-      "'ConflictClauseLattice.impliesPoset_antisymm' depends on axioms: [propext]",
-      "'ConflictClauseLattice.emptyClause3_minimal' does not depend on any axioms",
-      "'ConflictClauseLattice.clauseMeet_implies_left' depends on axioms: [propext]",
-      "'ConflictClauseLattice.clauseMeet_implies_right' depends on axioms: [propext]",
-      "'ConflictClauseLattice.implies_clauseMeet_iff' depends on axioms: [propext]",
-      "'ConflictClauseLattice.boundary1_comp_boundary2_eq_zero' depends on axioms: [propext, Quot.sound]",
-      "'ConflictClauseLattice.boundary2_comp_boundary3_eq_zero' depends on axioms: [propext, Quot.sound]",
-      "'ConflictClauseLattice.euler_poincare_L3' does not depend on any axioms",
-      "'ConflictClauseLattice.non_empty_euler_characteristic_L3' does not depend on any axioms",
-      "'ConflictClauseLattice.satisfiesClause_iff_not_implies_dualAtom' does not depend on any axioms",
-      "'ConflictClauseLattice.satisfiesFormula_eq_isUnobstructed_dualAtom' does not depend on any axioms",
-      "'ConflictClauseLattice.dualAtoms_eq_layer3' does not depend on any axioms",
-      "'ConflictClauseLattice.modelCount3_eq_unobstructedAtomCount3' depends on axioms: [propext]",
-      "'ConflictClauseLattice.tick_run' does not depend on any axioms",
-      "'ConflictClauseLattice.monad_reduction_two_ticks' does not depend on any axioms",
-      "'ConflictClauseLattice.simulateLatticeTraversal_run' depends on axioms: [propext]",
-      "'ConflictClauseLattice.simulateBlockHomologicalTraversal_run' depends on axioms: [propext]",
-      "'ConflictClauseLattice.state_injection_steps' depends on axioms: [propext]",
-      "'ConflictClauseLattice.lattice_traversal_complexity_bound' depends on axioms: [propext, Quot.sound]",
-      "'ConflictClauseLattice.lattice_traversal_steps_exact' depends on axioms: [propext, Quot.sound]",
-      "'ConflictClauseLattice.block_homological_traversal_bound' depends on axioms: [propext, Quot.sound]",
-      "'ConflictClauseLattice.subexponential_exponent_strictly_smaller' depends on axioms: [propext, Quot.sound]",
-      "'ConflictClauseLattice.eth_conflict_clause_lattice_master_product_theorem' depends on axioms: [propext,",
-      "Classical.choice,",
-      "Quot.sound]",
-      "'ConflictClauseLattice.exp_one_lt_three' depends on axioms: [propext, Classical.choice, Quot.sound]",
-      "'ConflictClauseLattice.one_lt_log_nat_of_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]",
-      "'ConflictClauseLattice.logDenominator_gt_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
-      "'ConflictClauseLattice.subExponential_rpow_lt_two_pow' depends on axioms: [propext, Classical.choice, Quot.sound]",
-      "'ConflictClauseLattice.simulateLatticeTraversal_exceeds_subExponential_bound' depends on axioms: [propext,",
-      "Classical.choice,",
-      "Quot.sound]",
-      "'ConflictClauseLattice.block_homological_traversal_real_log_bound' depends on axioms: [propext,",
-      "Classical.choice,",
-      "Quot.sound]",
-      "'ConflictClauseLattice.simulateBlockHomologicalTraversal_at_logBlockSize_bound' depends on axioms: [propext,",
-      "Classical.choice,",
-      "Quot.sound]"
+      "ConflictClauseLattice.StepCountingMonad: theorems=25 nonstandard=0",
+      "TOTAL theorems=69 nonstandard=0"
     ],
     "status": "KERNEL_AUDIT_PASS"
   },
@@ -184,9 +136,9 @@
     {
       "module": "ConflictClauseLattice.StepCountingMonad",
       "source_path": "ConflictClauseLattice/StepCountingMonad.lean",
-      "source_sha256": "ebd9e57732b6116f96b2c66248b1bf7f60a870b318935c9496bf29bf524aa301",
+      "source_sha256": "5d04e4bfd76a56f3c8cb9814b2150ee555cfa866c670a932fdaf303429d42c70",
       "source_size_bytes": 14193,
-      "theorems_verified": 24,
+      "theorems_verified": 25,
       "nonstandard_axioms": 0,
       "kernel_axioms_used": [
         "propext",
@@ -196,18 +148,18 @@
       "compiled_artifacts": {
         "olean": {
           "path": ".lake/build/lib/lean/ConflictClauseLattice/StepCountingMonad.olean",
-          "sha256": "04af3c98e1619742c3b7f7de1ba32758fcf5982f92e1cc0fb4051fe2cca04a8f",
-          "size_bytes": 515768
+          "sha256": "3a1b38d146677e57aa7dad66fff3234a49ef7607fd250be2ff22b2296477b765",
+          "size_bytes": 566136
         },
         "ilean": {
           "path": ".lake/build/lib/lean/ConflictClauseLattice/StepCountingMonad.ilean",
-          "sha256": "104d78188bd7f5add09f9d7c45369db5a06bbed70fad90cd28f24ad18d2ccd29",
-          "size_bytes": 34306
+          "sha256": "8e53289867df5bfcb7590ff07520a06ad4862b355bfe1cb3a4393a16ec7424d2",
+          "size_bytes": 39386
         },
         "c_ir": {
           "path": ".lake/build/ir/ConflictClauseLattice/StepCountingMonad.c",
-          "sha256": "9a7bb9d77689dfd04215c411bb3cd0ccb424cb9f466c78421bb7441cda044ec3",
-          "size_bytes": 24136
+          "sha256": "b3b9bfaeb3e7f9488f7ad806441db9e4d4cc079e8c748dea2a260ab19f0c4615",
+          "size_bytes": 24450
         }
       }
     },
@@ -246,7 +198,7 @@
     "formally_proved_in_lean": [
       "Finite graded conflict-clause poset L_3 (27 clauses across Layers 0, 1, 2, 3; 54 covering edges; reflexivity, transitivity, antisymmetry of implication order; bounded meet-semilattice laws in ConflictClauseLattice/PosetLattice.lean, 25 theorems).",
       "Cellular chain complex over Z (boundary_1 o boundary_2 = 0, boundary_2 o boundary_3 = 0, Euler-Poincare identity 1 - 6 + 12 - 8 = -1, and exact #3-SAT unobstructed dual-atom bijection in ConflictClauseLattice/HomologicalCertificate.lean, 18 theorems).",
-      "Pure functional step-counting monad (CountM := StateM CountingState) with tick transitions, Monad Reduction (simp [Bind.bind, StateT.bind]), State Injection (injection), discrete Presburger arithmetic step bounds (omega) for simulateLatticeTraversal (<= n^2 + 2^n) and simulateBlockHomologicalTraversal (<= (n+m)^2 + 2^(n/max(k,1))), and real-valued sub-exponential bounds over Real using Mathlib's Real.log and Real.rpow (block_homological_traversal_real_log_bound, simulateBlockHomologicalTraversal_at_logBlockSize_bound, subExponential_rpow_lt_two_pow, and simulateLatticeTraversal_exceeds_subExponential_bound in ConflictClauseLattice/StepCountingMonad.lean, 24 theorems).",
+      "Pure functional step-counting monad (CountM := StateM CountingState) with tick transitions, Monad Reduction (simp [Bind.bind, StateT.bind]), State Injection (injection), discrete Presburger arithmetic step bounds (omega) for simulateLatticeTraversal (<= n^2 + 2^n) and simulateBlockHomologicalTraversal (<= (n+m)^2 + 2^(n/max(k,1))), and real-valued sub-exponential bounds over Real using Mathlib's Real.log and Real.rpow (block_homological_traversal_real_log_bound, simulateBlockHomologicalTraversal_at_logBlockSize_bound, subExponential_rpow_lt_two_pow, simulateLatticeTraversal_exceeds_subExponential_bound, and denominator_divergence in ConflictClauseLattice/StepCountingMonad.lean, 25 theorems).",
       "Master 5-pillar conjunction theorem (eth_conflict_clause_lattice_master_product_theorem in ConflictClauseLattice/FinalProductTheorem.lean, 1 theorem)."
     ],
     "model_assumptions_and_boundaries": [

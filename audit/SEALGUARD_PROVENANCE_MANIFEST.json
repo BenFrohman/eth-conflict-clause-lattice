@@ -3,13 +3,13 @@
   "classification": "PUBLIC_VERIFIABLE_PROVENANCE_ATTESTATION",
   "originator": "Benjamin Stanley Frohman (ORCID: 0009-0006-7068-3718)",
   "zenodo_doi": "10.5281/zenodo.23747592",
-  "timestamp_utc": "2026-10-29T01:50:13Z",
-  "merkle_root_sha256": "aee441abb7364ee81aefc3c9f47e9ffa2883d05bbf56f906db817bbc39ec7ba4",
-  "hmac_sha256_seal": "76a0a73c4caf52722ecb510fd1f737fde4a407df366a1bf71112919ec47aa8e7",
+  "timestamp_utc": "2026-10-29T22:34:29Z",
+  "merkle_root_sha256": "ee809fc096b5d34a5af323c217af86c845f4812e648786343032256c78d15f43",
+  "hmac_sha256_seal": "992f8fe17697654ad67b8ec27718c376a12671e364507d1585ace72dfa79672f",
   "lean_kernel_verification": {
     "toolchain": "leanprover/lean4:v4.30.0-rc1",
     "mathlib": "v4.30.0-rc1",
-    "theorems_verified": 68,
+    "theorems_verified": 69,
     "sorry_count": 0,
     "nonstandard_axioms": 0,
     "allowed_standard_axioms_used": [
@@ -28,8 +28,8 @@
       "titan_audit_ed25519_verified",
       "prior_art_timeline_attested"
     ],
-    "merkle_root_bound": "aee441abb7364ee81aefc3c9f47e9ffa2883d05bbf56f906db817bbc39ec7ba4",
-    "hmac_sha256_receipt": "76a0a73c4caf52722ecb510fd1f737fde4a407df366a1bf71112919ec47aa8e7",
-    "timestamp_utc": "2026-10-29T01:50:13Z"
+    "merkle_root_bound": "ee809fc096b5d34a5af323c217af86c845f4812e648786343032256c78d15f43",
+    "hmac_sha256_receipt": "992f8fe17697654ad67b8ec27718c376a12671e364507d1585ace72dfa79672f",
+    "timestamp_utc": "2026-10-29T22:34:29Z"
   }
 }

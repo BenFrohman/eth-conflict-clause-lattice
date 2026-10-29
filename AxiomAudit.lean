@@ -77,5 +77,6 @@ open Lean Elab Command
 #print axioms ConflictClauseLattice.logDenominator_gt_one
 #print axioms ConflictClauseLattice.subExponential_rpow_lt_two_pow
 #print axioms ConflictClauseLattice.simulateLatticeTraversal_exceeds_subExponential_bound
+#print axioms ConflictClauseLattice.denominator_divergence
 #print axioms ConflictClauseLattice.block_homological_traversal_real_log_bound
 #print axioms ConflictClauseLattice.simulateBlockHomologicalTraversal_at_logBlockSize_bound
