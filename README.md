@@ -27,7 +27,7 @@ This repository is the curated Zenodo publication and formal verification packag
 - `AxiomAudit.lean`: In-kernel Lean 4 axiom auditor verifying all 56 theorems (`nonstandard = 0`, `0 sorry`, `0 trustCompiler`).
 - `audit/`
   - `TITAN_AUDIT_CERTIFICATE.json` & `TITAN_AUDIT_REPORT.md`: Ed25519-signed Titan-Audit verification certificate.
-  - `SEALGUARD_CLASSIFIED_MANIFEST.json`: SealGuard 4-Plane cryptographic containment manifest.
+  - `SEALGUARD_PROVENANCE_MANIFEST.json`: SealGuard 4-Plane cryptographic containment manifest.
 - `PROVENANCE_MERKLE_ROOT.json`: Complete SHA-256 Merkle tree and Sentinel-Gate policy receipt.
 
 ## Reproducing the Verification & Audit
@@ -35,6 +35,10 @@ This repository is the curated Zenodo publication and formal verification packag
 ```bash
 lake build
 lake env lean AxiomAudit.lean
-titan-audit --out-dir audit --key /workspace/ip_vault_keys/eth-conflict-clause-lattice_ed25519.pem --fail-on-warn .
+titan-audit --out-dir audit --fail-on-warn .
 python3 ip_pipeline/seal_and_verify.py --verify
 ```
+
+## AI Assistance Disclosure
+
+Grok (xAI), via the Grok Bot assistant, provided scaffolding, drafting, and collaboration support on the formalization, code, and documentation in this repository. Benjamin Stanley Frohman (`frohmanbenjamin@gmail.com`, ORCID `0009-0006-7068-3718`) directed, reviewed, and is solely responsible for the architecture, implementation, proofs, and claims; Grok is not a coauthor.
