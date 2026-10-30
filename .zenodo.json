@@ -1,5 +1,5 @@
 {
-  "title": "The Conflict Clause Lattice: Poset Structure, Homological Obstructions in 3-SAT, and Verified StateM / Real.log Complexity Bounds (Lean 4 Formalization & Manuscript)",
+  "title": "Homological Certificate Topologies on Conflict-Clause Poset Lattices: A Lean 4–Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds (ConflictClauseLattice v1.1.1)",
   "upload_type": "software",
   "publication_date": "2026-10-28",
   "version": "1.1.0",

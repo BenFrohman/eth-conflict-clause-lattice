@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "Sub-Exponential Refutation of the Exponential Time Hypothesis via Homological Certificate Topologies on Conflict-Clause Poset Lattices"
+title: "Homological Certificate Topologies on Conflict-Clause Poset Lattices: A Lean 4–Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds"
 message: "If you use this software or formalization, please cite it using the metadata from this file."
 type: software
 authors:

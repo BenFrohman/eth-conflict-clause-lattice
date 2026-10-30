@@ -5,9 +5,9 @@
   "author": "Benjamin Stanley Frohman",
   "orcid": "0009-0006-7068-3718",
   "zenodo_doi": "10.5281/zenodo.23747592",
-  "timestamp_utc": "2026-10-29T22:34:29Z",
+  "timestamp_utc": "2026-10-30T06:45:57Z",
   "file_count": 32,
-  "merkle_root_sha256": "ee809fc096b5d34a5af323c217af86c845f4812e648786343032256c78d15f43",
+  "merkle_root_sha256": "c15d48e86160653852f79580b28c93a3ac7be4f9a300bf5f4bd1153e3c4bed4c",
   "merkle_tree_depth": 6,
   "sentinel_gate_receipt": {
     "protocol": "Sentinel-Gate-v1.0",
@@ -19,9 +19,9 @@
       "titan_audit_ed25519_verified",
       "prior_art_timeline_attested"
     ],
-    "merkle_root_bound": "ee809fc096b5d34a5af323c217af86c845f4812e648786343032256c78d15f43",
-    "hmac_sha256_receipt": "992f8fe17697654ad67b8ec27718c376a12671e364507d1585ace72dfa79672f",
-    "timestamp_utc": "2026-10-29T22:34:29Z"
+    "merkle_root_bound": "c15d48e86160653852f79580b28c93a3ac7be4f9a300bf5f4bd1153e3c4bed4c",
+    "hmac_sha256_receipt": "0fb65b4d3a9e8ec39ad724e1e3e1b011e2ad433e8d1f2a5005fa152b00ef6ad4",
+    "timestamp_utc": "2026-10-30T06:45:57Z"
   },
   "leaves": [
     {
@@ -45,8 +45,8 @@
     {
       "index": 3,
       "path": ".zenodo.json",
-      "sha256": "2eb4fa4e9f32586ce6466bd864a7671f9cf7041cd5186d1239a65a6e5d7a82a3",
-      "size_bytes": 2892
+      "sha256": "34c562d089c0ea41c9367acd30b982494b77b334770035cccad975096862dcf0",
+      "size_bytes": 2909
     },
     {
       "index": 4,
@@ -63,8 +63,8 @@
     {
       "index": 6,
       "path": "CITATION.cff",
-      "sha256": "6e1ecb644ce118af1d54bf0fd32095fd6b3600d1b1ebb77a6309f06a9340e1ba",
-      "size_bytes": 808
+      "sha256": "b42ce7e5ad51c7df1b561eb4f4a5b62e21594ca32b5eaa0b6235ae8d8afc8b4c",
+      "size_bytes": 825
     },
     {
       "index": 7,
@@ -189,14 +189,14 @@
     {
       "index": 27,
       "path": "paper/main.pdf",
-      "sha256": "c6e68d46b2fdd7ca027103231c09b9d2387e1f2a27d4627b642cbb303e80dbf4",
-      "size_bytes": 463470
+      "sha256": "75a6df68099871257eb41911d1f930ed46070f79fc4c665e0602163445360122",
+      "size_bytes": 463568
     },
     {
       "index": 28,
       "path": "paper/main.tex",
-      "sha256": "6cc04fa72a6cde016c01b91b98e83c1904bb3fa4af9bdcbf5526fbbee99a3096",
-      "size_bytes": 25843
+      "sha256": "caa406dba3c740de7e52c9054772925950e68b2f483e8fb24e754d3bcc326793",
+      "size_bytes": 25911
     },
     {
       "index": 29,
