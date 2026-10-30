@@ -10,3 +10,8 @@
 *.toc
 __pycache__/
 *.pyc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+.DS_Store
+*.zip

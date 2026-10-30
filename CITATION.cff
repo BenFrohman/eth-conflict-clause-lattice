@@ -7,13 +7,14 @@ authors:
     given-names: Benjamin Stanley
     orcid: "https://orcid.org/0009-0006-7068-3718"
     affiliation: "Abstract AI Research Syndicate & Formal Methods Engineering Group"
-version: 1.0.0
-date-released: "2026-10-28"
-doi: "10.5281/zenodo.23747592"
-url: "https://doi.org/10.5281/zenodo.23747592"
+version: 1.1.1
+date-released: "2026-10-30"
+doi: "10.5281/zenodo.23782560"
+url: "https://doi.org/10.5281/zenodo.23782560"
+repository-code: "https://github.com/BenFrohman/eth-conflict-clause-lattice"
 license: Apache-2.0
 keywords:
-  - Exponential Time Hypothesis
+  - 3-SAT
   - "#3-SAT"
   - Conflict-Clause Poset Lattice
   - Homological Certificates
