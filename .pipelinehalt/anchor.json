@@ -1,0 +1,39 @@
+{
+  "title": "\\textbf{Homological Certificate Topologies on Conflict-Clause Poset Lattices: A Lean 4--Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds",
+  "source": "paper/main.tex",
+  "claims": [
+    {
+      "id": "theorem-3.1",
+      "number": "Theorem 3.1",
+      "statement": "For every $k \\in \\{2, 3\\}$, the boundary operators satisfy $\\partial_{k-1} \\circ \\partial_k = 0$. Moreover, for $n=3$, the Euler characteristic of the conflict clause complex is \\[ \\chi(\\mathcal{L}_3) = |L_0| - |L_1| + |L_2| - |L_3| = 1 - 6 + 12 - 8 = -1. \\]",
+      "kind": "theorem",
+      "source": "paper/main.tex:150",
+      "title": "Chain Complex Fundamental Identity"
+    },
+    {
+      "id": "eq:subexp_bound",
+      "number": "Equation (eq:subexp_bound), Section 4",
+      "kind": "claim",
+      "statement": "Applying the block-triangularization theorem and spectral gap bounds over the decomposed sub-complexes yields a strict reduction in the depth of required branching steps. The runtime complexity $T(n, m)$ for an instance with $n$ variables and $m$ clauses is bounded above by: $T(n, m) \\le (n + m)^{O(1)} \\cdot 2^{\\frac{n}{(\\log n)^{1/2 + o(1)}}}$",
+      "source": "paper/main.tex:161 (hand-added verbatim: displayed equation, not a theorem environment)"
+    }
+  ],
+  "clarifications": {
+    "92afe540c9d8": {
+      "claimId": "theorem-3.1",
+      "kind": "ambiguous",
+      "question": "Paper claim Theorem 3.1 (theorem-3.1) states: “For every $k \\in \\{2, 3\\}$, the boundary operators satisfy $\\partial_{k-1} \\circ \\partial_k = 0$. Moreover, for $n=3$, the Euler characteristic of the conflict clause complex is \\[ \\chi(\\mathcal{L}_3…”. Its title is “Chain Complex Fundamental Identity”, which does not appear to describe that statement. Is the title or the statement misworded?",
+      "answer": "harmless wording: 'Chain Complex Fundamental Identity' is the name of the identity ∂∘∂ = 0 that the statement asserts (paper/main.tex:150).",
+      "verdict": "intentional",
+      "answeredAt": "2026-11-03T19:55:33.216Z"
+    },
+    "ee253b0d8278": {
+      "claimId": "theorem-3.1",
+      "kind": "narrower",
+      "question": "Paper claim Theorem 3.1 (theorem-3.1) states: “For every $k \\in \\{2, 3\\}$, the boundary operators satisfy $\\partial_{k-1} \\circ \\partial_k = 0$. Moreover, for $n=3$, the Euler characteristic of the conflict clause complex is \\[ \\chi(\\mathcal{L}_3…”. The matched Lean statement(s) `boundary1_comp_boundary2_eq_zero`, `boundary2_comp_boundary3_eq_zero`, `euler_poincare_L3` do not mention the set {2,3}. Is the omission intentional, or is it covered by a declaration the matcher missed?",
+      "answer": "equivalent, intentional: k ∈ {2,3} is proved case by case — k = 2 is boundary1_comp_boundary2_eq_zero (HomologicalCertificate.lean:38), k = 3 is boundary2_comp_boundary3_eq_zero (:53).",
+      "verdict": "intentional",
+      "answeredAt": "2026-11-03T19:55:33.266Z"
+    }
+  }
+}

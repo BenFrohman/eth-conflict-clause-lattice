@@ -1,0 +1,21 @@
+{
+  "tool": "pipelinehalt",
+  "anchor": "/workspace/ph-runs/_out/eth-conflict-clause-lattice/anchor.json",
+  "instructions": "Fill in `answer` for each question (start with yes/intentional or no/unintended, optionally followed by an explanation), then run `pipelinehalt answer --anchor <anchor> --from <this file>`. Blank answers stay open.",
+  "questions": [
+    {
+      "id": "92afe540c9d8",
+      "claimId": "theorem-3.1",
+      "kind": "ambiguous",
+      "question": "Paper claim Theorem 3.1 (theorem-3.1) states: “For every $k \\in \\{2, 3\\}$, the boundary operators satisfy $\\partial_{k-1} \\circ \\partial_k = 0$. Moreover, for $n=3$, the Euler characteristic of the conflict clause complex is \\[ \\chi(\\mathcal{L}_3…”. Its title is “Chain Complex Fundamental Identity”, which does not appear to describe that statement. Is the title or the statement misworded?",
+      "answer": ""
+    },
+    {
+      "id": "e01e8c8614e7",
+      "claimId": "theorem-3.1",
+      "kind": "narrower",
+      "question": "Paper claim Theorem 3.1 (theorem-3.1) states: “For every $k \\in \\{2, 3\\}$, the boundary operators satisfy $\\partial_{k-1} \\circ \\partial_k = 0$. Moreover, for $n=3$, the Euler characteristic of the conflict clause complex is \\[ \\chi(\\mathcal{L}_3…”. The matched Lean statement(s) `boundary1_comp_boundary2_eq_zero`, `non_empty_euler_characteristic_L3`, `euler_poincare_L3`, `layer_partition_sum_three` do not mention the set {2,3}. Is the omission intentional, or is it covered by a declaration the matcher missed?",
+      "answer": ""
+    }
+  ]
+}

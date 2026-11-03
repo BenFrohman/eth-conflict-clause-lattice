@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "note": "Hand-written by the PipelineHalt run of 2026-11-03 from the Lean names the paper itself cites (paper/main.tex) and from reading HomologicalCertificate.lean / StepCountingMonad.lean. It pairs claims with declarations; it does not assert that the meanings match.",
+  "claims": {
+    "theorem-3.1": {
+      "lean": ["boundary1_comp_boundary2_eq_zero", "boundary2_comp_boundary3_eq_zero", "euler_poincare_L3"],
+      "note": "k = 2 and k = 3 are proved as two separate theorems; the Euler sum 1 - 6 + 12 - 8 = -1 is euler_poincare_L3."
+    },
+    "eq:subexp_bound": {
+      "lean": ["simulateBlockHomologicalTraversal_at_logBlockSize_bound", "block_homological_traversal_real_log_bound"],
+      "note": "Paper Section 4.1 cites these as the Lean counterpart of the displayed bound."
+    }
+  }
+}
