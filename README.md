@@ -2,7 +2,7 @@
 
 **A Lean 4–Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds (ConflictClauseLattice v1.1.1)**
 
-[![CI](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/lean_action_ci.yml/badge.svg)](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/lean_action_ci.yml)
+[![lean_action_ci.yml](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/lean_action_ci.yml/badge.svg?branch=main)](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/lean_action_ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Lean v4.30.0-rc1](https://img.shields.io/badge/Lean-v4.30.0--rc1-purple.svg)](lean-toolchain)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23782560-blue.svg)](https://doi.org/10.5281/zenodo.23782560)
