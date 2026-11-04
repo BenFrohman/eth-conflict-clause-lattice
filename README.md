@@ -1,6 +1,8 @@
 # Homological Certificate Topologies on Conflict-Clause Poset Lattices
 
-[![Lean certificate](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/certify.yml/badge.svg)](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/certify.yml)
+[![Lean certificate](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/certify.yml/badge.svg?branch=main)](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/certify.yml)
+[![Lean 4](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/lean.yml)
+
 
 **A Lean 4–Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds (ConflictClauseLattice v1.1.1)**
 
