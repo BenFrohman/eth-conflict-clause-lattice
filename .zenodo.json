@@ -1,8 +1,8 @@
 {
-  "title": "Homological Certificate Topologies on Conflict-Clause Poset Lattices: A Lean 4–Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds (ConflictClauseLattice v1.1.1)",
+  "title": "The Three-Variable Conflict-Clause Poset: Graded Structure, Model Counting by Unobstructed Atoms, and Step-Counter Bounds, Formalized in Lean 4",
   "upload_type": "software",
-  "publication_date": "2026-10-28",
-  "version": "1.1.0",
+  "publication_date": "2026-11-04",
+  "version": "1.2.0",
   "license": "Apache-2.0",
   "access_right": "open",
   "creators": [
@@ -12,18 +12,15 @@
       "orcid": "0009-0006-7068-3718"
     }
   ],
-  "description": "Complete LaTeX manuscript (main.pdf), interactive 3D WebGL Hasse diagram and homological explorer (conflict_clause_lattice.html), and machine-checked Lean 4 package (ConflictClauseLattice, v4.30.0-rc1 + Mathlib v4.30.0-rc1) containing 69 verified theorems with 0 sorry and 0 nonstandard axioms ([propext, Classical.choice, Quot.sound]). Formalizes the graded conflict-clause poset L_3 (27 conflict clauses, 54 edges), cellular boundary complex d_{k-1} o d_k = 0, exact #3-SAT unobstructed atom bijection, pure functional step-counting monad (CountM := StateM CountingState) with Monad Reduction (simp [Bind.bind, StateT.bind]), State Injection (injection), Presburger arithmetic bounds (omega), and real-valued sub-exponential complexity bounds using Mathlib's Real.log and Real.rpow (block_homological_traversal_real_log_bound, simulateBlockHomologicalTraversal_at_logBlockSize_bound, subExponential_rpow_lt_two_pow, simulateLatticeTraversal_exceeds_subExponential_bound, and denominator_divergence). Includes Lake kernel build certificate, Titan-Audit Ed25519 attestation, and SealGuard SHA-256 Merkle provenance manifest.",
+  "description": "Lean 4 + Mathlib (v4.30.0-rc1) formalization of the poset of the 27 clauses over three variables under literal inclusion: layers 1/6/12/8, 54 covering edges, partial order with least element and greatest-lower-bound meet, alternating layer sum -1, cochain identities d o d = 0, and the exact identity #models(Phi) = #rank-3 clauses not implied by any clause of Phi. Also exact tick counts and upper bounds for two explicitly defined step-counting StateM programs, including (n+m)^2 + 2^(n/(log n)^(1/2+eps)) at block size ceil((log n)^(1/2+eps)). These concern the defined counters only and make no claim about SAT complexity or ETH. 54 theorems, no sorry, no native_decide, standard axioms only. The attached paper states exactly these results.",
   "keywords": [
     "3-SAT",
-    "Exponential Time Hypothesis",
-    "Conflict Clause Lattice",
-    "Poset Homology",
+    "model counting",
+    "conflict clauses",
+    "poset",
     "Lean 4",
-    "Mathlib Real.log",
-    "Step-Counting Monad",
-    "Presburger Arithmetic",
-    "Titan Audit",
-    "SealGuard"
+    "Mathlib",
+    "step-counting monad"
   ],
   "related_identifiers": [
     {

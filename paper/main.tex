@@ -1,299 +1,236 @@
-% Copyright 2026 Benjamin Stanley Frohman (ORCID 0009-0006-7068-3718). Apache License 2.0.
-\begin{filecontents*}{\jobname.bib}
-@misc{frohman2026eth_zenodo,
-  author       = {Frohman, Benjamin Stanley},
-  title        = {The Conflict Clause Lattice: Poset Structure and Homological Obstructions in 3-SAT},
-  month        = oct,
-  year         = 2026,
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.23747592},
-  url          = {https://doi.org/10.5281/zenodo.23747592},
-  note         = {ORCID: 0009-0006-7068-3718. 69 kernel-verified Lean 4 theorems (including Mathlib Real.log and Real.rpow sub-exponential step-counting bounds), Titan-Audit Ed25519 certificate, and SealGuard SHA-256 Merkle provenance.}
-}
-
-@misc{frohman2026ns_tether_june1,
-  author       = {Frohman, Benjamin Stanley},
-  title        = {June 1, 2026 Frohmanian Symplectic Tether Manuscript: Exact Phase-Space Volume Preservation and Global Regularity for the 3D Incompressible Navier--Stokes Equations on $\mathbb{T}^3$},
-  month        = jun,
-  year         = 2026,
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.23629499},
-  url          = {https://doi.org/10.5281/zenodo.23629499},
-  note         = {Preceded by Google Drive root formalization \texttt{NS\_Millennium\_Proof} (May 27, 2026, 22:57:22 UTC, Folder ID: \texttt{1t6gNjlug13-j2amIgXashkoMoLwQ2-sv}) and \texttt{Lean\_Formalization\_2026-05-28} (Folder ID: \texttt{1VtDm0DBEpiNeh3fepG5S9P9gTRzfc2sy}).}
-}
-
-@misc{frohman2026fsymhd,
-  author       = {Frohman, Benjamin Stanley},
-  title        = {Frohmanian Symplectohydrodynamics (FSymHD): A Unified Geometric, Machine-Verified, and Post-Quantum Cryptographic Framework for 3D Fluid Regularity},
-  month        = jun,
-  year         = 2026,
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.23632786},
-  url          = {https://doi.org/10.5281/zenodo.23632786},
-  note         = {Companion Lean 4 package \texttt{frohmanian-symplectic-tether-regularity}, DOI: \texttt{10.5281/zenodo.23652841} and \texttt{10.5281/zenodo.23652843}.}
-}
-
-@misc{frohman2026titanaudit,
-  author       = {Frohman, Benjamin Stanley},
-  title        = {Titan Audit: Reproducible Ed25519-Signed Verification and Semantic Vacuity Auditing for Lean 4 Projects, with SealGuard Cryptographic Provenance},
-  month        = oct,
-  year         = 2026,
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.23630648},
-  url          = {https://doi.org/10.5281/zenodo.23630648},
-  note         = {Cryptographic Ed25519 anti-vacuity auditing and SHA-256 Merkle provenance.}
-}
-
-@misc{frohman2026sentinel_sealguard,
-  author       = {Frohman, Benjamin Stanley},
-  title        = {Sentinel Gate and SealGuard: Deterministic Pre-Execution Policy Enforcement, Capability-Attested Boundary Auditing, and Cryptographic Merkle Provenance},
-  year         = 2026,
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.23631670},
-  url          = {https://doi.org/10.5281/zenodo.23631670},
-  note         = {Includes Sentinel Gate (April 4, 2026, DOI: \texttt{10.5281/zenodo.23632766}), Agentic-Dev (April 8, 2026, DOI: \texttt{10.5281/zenodo.23632768}), and Partial Orders of Intelligence (October 1, 2026, DOI: \texttt{10.5281/zenodo.23629474}).}
-}
-
-@article{impagliazzo2001complexity,
-  author  = {Impagliazzo, Russell and Paturi, Ramamohan},
-  title   = {On the Complexity of $k$-{SAT}},
-  journal = {Journal of Computer and System Sciences},
-  volume  = {62},
-  number  = {2},
-  pages   = {367--375},
-  year    = {2001}
-}
-
-@article{impagliazzo2001problems,
-  author  = {Impagliazzo, Russell and Paturi, Ramamohan and Zane, Francis},
-  title   = {Which Problems Have Strongly Exponential Complexity?},
-  journal = {Journal of Computer and System Sciences},
-  volume  = {63},
-  number  = {4},
-  pages   = {512--530},
-  year    = {2001}
-}
-
-@book{stanley2011enumerative,
-  author    = {Stanley, Richard P.},
-  title     = {Enumerative Combinatorics, Volume 1},
-  edition   = {2nd},
-  publisher = {Cambridge University Press},
-  year      = {2011}
-}
-
-@inproceedings{demoura2021lean4,
-  author    = {de Moura, Leonardo and Ullrich, Sebastian},
-  title     = {The {Lean 4} Theorem Prover and Programming Language},
-  booktitle = {Automated Deduction -- CADE 28},
-  series    = {Lecture Notes in Computer Science},
-  volume    = {12699},
-  pages     = {625--635},
-  publisher = {Springer},
-  year      = {2021}
-}
-\end{filecontents*}
-
-\documentclass[11pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{hyperref}
-
-\geometry{letterpaper, margin=1in}
-\emergencystretch=3em
-
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{longtable,booktabs,array}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\lean}[1]{\path{#1}}
+\sloppy
 
-\title{\textbf{Homological Certificate Topologies on Conflict-Clause Poset Lattices: A Lean 4--Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds}}
-\author{Benjamin Stanley Frohman\\
-\small ORCID: \href{https://orcid.org/0009-0006-7068-3718}{0009-0006-7068-3718} $\cdot$ Handle: \texttt{@BenFrohman}\\
-\small Companion Archive DOI: \href{https://doi.org/10.5281/zenodo.23747592}{\texttt{10.5281/zenodo.23747592}}}
-\date{October 2026}
-
+\title[The three-variable conflict-clause lattice]{The Three-Variable Conflict-Clause Poset: Graded Structure, Model Counting by Unobstructed Atoms, and Step-Counter Bounds, Formalized in Lean~4}
+\author{Benjamin Stanley Frohman}
+\email{frohmanbenjamin@gmail.com}
+\date{November 4, 2026}
 \begin{document}
-
+\begin{abstract}
+We study the finite poset $L_3$ of all $27$ clauses over three Boolean variables, ordered by literal inclusion (equivalently, by logical implication $c_1\models c_2$ for sub-clauses). We prove in Lean~4 with Mathlib that $L_3$ is graded with layer sizes $1,6,12,8$ and $54$ covering edges; that literal inclusion is a partial order with least element the empty clause and with a componentwise meet that is a greatest lower bound; that the alternating layer sum is $-1$; and that for every CNF formula $\Phi$ over the three variables the number of satisfying assignments equals the number of rank-$3$ clauses not implied by any clause of $\Phi$. We also formalize a step-counting state monad and prove exact tick counts and upper bounds for two explicitly defined simulation programs, including a bound of the form $(n+m)^2+2^{n/(\log n)^{1/2+\varepsilon}}$ for the block program run at block size $\lceil(\log n)^{1/2+\varepsilon}\rceil$. These bounds concern the tick counters of the defined programs only; no claim is made about the complexity of SAT, \#SAT, or the Exponential Time Hypothesis. All proofs are free of \texttt{sorry} and \texttt{native\_decide} and use only Lean's standard axioms; the main results are bundled in a single master theorem.
+\end{abstract}
 \maketitle
 
-\begin{abstract}
-We introduce a geometric and homological framework for analyzing the Boolean satisfiability problem ($k$-SAT, with focus on $3$-SAT) via the \emph{Conflict Clause Lattice} $\mathcal{L}_n$. By organizing all partial conflict clauses over $n$ variables into a graded partially ordered set (poset) ordered by logical implication and resolution subsumption, we establish a canonical cellular chain complex $\mathcal{C}_\bullet(\mathcal{L}_n(\Phi); \mathbb{F}_2)$ associated with any $3$-CNF formula $\Phi$. We prove that global satisfiability is governed by the kernel and cokernel structure of the graded boundary operators $\partial_k$ across clause layers, and we formulate a machine-checked step-counting monad (\texttt{CountM}) in Lean~4 (\texttt{v4.30.0-rc1}) coupled with Mathlib's real-analytic logarithm (\texttt{Real.log}) and real power (\texttt{Real.rpow}) libraries that bridges discrete functional execution traces with sub-exponential complexity bounds via monadic state reduction, Presburger arithmetic (\texttt{omega}), and real-analytic inequality verification. The companion Lean~4 package \texttt{ConflictClauseLattice} (\texttt{10.5281/zenodo.23747592}) contains 69 kernel-verified theorems with zero \texttt{sorry} axioms and zero nonstandard axioms~\cite{frohman2026eth_zenodo}.
-\end{abstract}
+\section{Introduction}
+Clause learning in SAT solvers manipulates clauses ordered by subsumption. For a fixed small number of variables this order is a finite poset that can be analysed exhaustively. This paper gives a complete, kernel-checked account of the case of three variables, together with an exact identity relating model counting to the poset, and a small formal framework for counting the steps of programs written in a state monad.
 
-\section{Introduction and Poset Formulation}
-The Exponential Time Hypothesis (ETH), introduced by Impagliazzo, Paturi, and Zane~\cite{impagliazzo2001complexity,impagliazzo2001problems}, conjectures that $3$-SAT requires $2^{\Omega(n)}$ time in the worst case. Standard DPLL and CDCL solvers explore the Boolean hypercube $\{0,1\}^n$ through sequential branching and clause learning, treating learned conflict clauses as an unstructured database.
+We emphasize at the outset what is \emph{not} claimed. The step bounds of Section~\ref{sec:steps} are statements about two specific programs whose only effect is to increment a counter by prescribed amounts (for instance, by $n^2$ and then by $2^n$). They are exact by construction and do not measure the running time of any SAT algorithm. Nothing in this paper bears on P vs.\ NP or on the Exponential Time Hypothesis.
 
-In this work, we embed the conflict structure of a $3$-CNF instance $\Phi$ over variables $V = \{x_1, \dots, x_n\}$ into a graded poset $\mathcal{L}_n = (P_n, \preceq)$~\cite{stanley2011enumerative}:
-\begin{itemize}
-    \item \textbf{Layer 0 (Bottom):} The empty conflict clause $\bot$ (contradiction), representing total unsatisfiability ($1$ element).
-    \item \textbf{Layer 1 (Unit Clauses):} The $2n$ unit literals $x_i, \neg x_i$ (for $n=3$, $6$ elements).
-    \item \textbf{Layer 2 (Binary Clauses):} The $4\binom{n}{2}$ two-literal clauses $(\ell_i \vee \ell_j)$ (for $n=3$, $12$ elements).
-    \item \textbf{Layer 3 (Ternary Clauses / Dual Atoms):} The $2^3 \binom{n}{3}$ three-literal clauses $(\ell_i \vee \ell_j \vee \ell_k)$ (for $n=3$, $8$ elements, each forbidding exactly one truth assignment in $\{0,1\}^3$).
-\end{itemize}
-For $n=3$, $\mathcal{L}_3$ comprises exactly $1 + 6 + 12 + 8 = 27$ clauses connected by $6 + 24 + 24 = 54$ covering edges.
+\section{The poset $L_3$}
+A \emph{variable state} is an element of $\{\bot,\top,\mathsf{F}\}$: the variable is absent, appears positively, or appears negatively. A \emph{clause} over $x_1,x_2,x_3$ (Lean: \lean{ValidClause3}) is a triple of variable states; there are $3^3=27$ of them (Lean: \lean{allValidClauses3}). The \emph{rank} of a clause is its number of literals. For variable states, $s_1\sqsubseteq s_2$ iff $s_1=\bot$ or $s_1=s_2$; for clauses, $c_1\preceq c_2$ iff this holds componentwise (Lean: \lean{ImpliesPoset}), i.e.\ the literals of $c_1$ are among those of $c_2$, so $c_1\models c_2$. A covering edge is a pair $c_1\preceq c_2$ with $\operatorname{rank}c_2=\operatorname{rank}c_1+1$. The meet $c_1\wedge c_2$ keeps, in each coordinate, a literal common to both and is $\bot$ otherwise (Lean: \lean{clauseMeet}).
 
-\section{Lattice Operations and Resolution Subsumption}
-Let $C_1, C_2 \in \mathcal{L}_n$ be non-tautological clauses. We define the partial order $C_1 \preceq C_2$ if and only if $C_1 \subseteq C_2$ as sets of literals (i.e., $C_1$ logically implies $C_2$, so $C_1$ forbids a superset of the truth assignments forbidden by $C_2$). Under this ordering, the meet operation $C_1 \wedge C_2 = C_1 \cap C_2$ extracts the common literal core of two conflict clauses, yielding a bounded meet-semilattice with minimum element $\bot = \emptyset$.
-
-\section{The Homological Obstruction Complex}
-To capture higher-order syzygies among conflict clauses, we associate to $\mathcal{L}_n$ a graded chain complex over $\mathbb{Q}$ (and $\mathbb{F}_2$):
-\[
-0 \longrightarrow C_3(\mathcal{L}_n) \xrightarrow{\;\partial_3\;} C_2(\mathcal{L}_n) \xrightarrow{\;\partial_2\;} C_1(\mathcal{L}_n) \xrightarrow{\;\partial_1\;} C_0(\mathcal{L}_n) \longrightarrow 0,
-\]
-where $\partial_k$ maps each $k$-clause to the signed alternating sum of its $(k-1)$-subclauses obtained by deleting one literal at a time.
-\begin{theorem}[Chain Complex Fundamental Identity]
-For every $k \in \{2, 3\}$, the boundary operators satisfy $\partial_{k-1} \circ \partial_k = 0$. Moreover, for $n=3$, the Euler characteristic of the conflict clause complex is
-\[
-\chi(\mathcal{L}_3) = |L_0| - |L_1| + |L_2| - |L_3| = 1 - 6 + 12 - 8 = -1.
-\]
+\begin{theorem}[Graded structure]\label{thm:graded}
+\begin{enumerate}
+\item $|L_3|=27$; the layers of rank $0,1,2,3$ have sizes $1,6,12,8$, and they partition $L_3$.
+\item There are exactly $54$ covering edges: $6$ from rank $0$, $24$ from rank $1$, and $24$ from rank $2$.
+\end{enumerate}
 \end{theorem}
 
-\section{Spectral Gap and Block-Triangularization of the Conflict Complex}
-Given an input $3$-CNF formula $\Phi \subseteq L_3(\mathcal{L}_n)$, each clause $C \in \Phi$ acts as a cohomological obstruction at Layer~3, eliminating the unique dual truth assignment $\alpha_C \in \{0,1\}^n$ that falsifies every literal of $C$. By decomposing the conflict incidence graph into weakly coupled homological blocks of size $b_k \sim (\log n)^{1/2 + o(1)}$, the induced boundary matrices $\partial_k|_{\Phi}$ admit a block-triangular filtration whose local rank defects isolate satisfiable assignment extensions without full $2^n$ backtracking.
-
-\section{Sub-Exponential Execution Bounds}
-Applying the block-triangularization theorem and spectral gap bounds over the decomposed sub-complexes yields a strict reduction in the depth of required branching steps. The runtime complexity $T(n, m)$ for an instance with $n$ variables and $m$ clauses is bounded above by:
-\begin{equation}\label{eq:subexp_bound}
-T(n, m) \le (n + m)^{O(1)} \cdot 2^{\frac{n}{(\log n)^{1/2 + o(1)}}}
-\end{equation}
-
-\subsection{The \texttt{StateM} Step-Counting Verification Framework and Real-Analytic Logarithmic Bridge}
-Within our Lean~4 verification architecture (\texttt{ConflictClauseLattice/StepCountingMonad.lean}), the \texttt{StateM} bound provides a machine-checked formal guarantee that the modeled algorithm's operational step count cannot structurally exceed the mathematical complexity upper bound of the cost model.
-
-\paragraph{1. What \texttt{StateM} Does Mechanically.}
-\texttt{StateM} is Lean~4's state monad, which threads an explicit state record through a sequence of functional computations. In our step-counting setup, the state record and monad alias are defined as:
-\begin{verbatim}
-structure CountingState where
-  steps : Nat
-
-abbrev CountM (alpha : Type) := StateM CountingState alpha
-
-def tick (n : Nat := 1) : CountM Unit :=
-  modify (fun s => { steps := s.steps + n })
-\end{verbatim}
-Every time a modeled traversal performs a structural operation (such as polynomial poset-filtration overhead or sub-lattice branching), it invokes \texttt{tick n}. This mutates the internal state via a monadic bind operation that maps the state transition
-\[
-\mathrm{steps}_{\mathrm{new}} = \mathrm{steps}_{\mathrm{old}} + n.
-\]
-
-\paragraph{2. How the \texttt{StateM} Bound Maps to Equation~\eqref{eq:subexp_bound} via \texttt{Real.log} and \texttt{Real.rpow}.}
-We formalize two operational traversal models inside \texttt{CountM Bool}: (i) the un-decomposed baseline \texttt{simulateLatticeTraversal n}, which ticks $n^2$ polynomial steps followed by $2^n$ brute-force hypercube steps, and (ii) the block-decomposed homological traversal \texttt{simulateBlockHomologicalTraversal n m blockK}, which ticks $(n+m)^2$ filtration steps followed by $2^{n / \max(\mathrm{blockK}, 1)}$ block-reduced branching steps.
-
-To formalize the non-linear real-analytic denominator $(\log n)^{1/2 + \varepsilon}$ in Eq.~\eqref{eq:subexp_bound}, we import Mathlib's real logarithm (\texttt{Mathlib.Analysis.SpecialFunctions.Log.Basic}) and real power (\texttt{Mathlib.Analysis.SpecialFunctions.Pow.Real}) libraries and define:
-\[
-\mathrm{logDenominator}(n, \varepsilon) := (\log n)^{\frac{1}{2} + \varepsilon}, \qquad
-\mathrm{logBlockSize}(n, \varepsilon) := \left\lceil (\log n)^{\frac{1}{2} + \varepsilon} \right\rceil,
-\]
-\[
-\mathrm{subExponentialBoundReal}(n, m, \varepsilon) := (n + m)^2 + 2^{\frac{n}{(\log n)^{1/2 + \varepsilon}}}.
-\]
-The theorem \texttt{simulateBlockHomologicalTraversal\_at\_logBlockSize\_bound} (derived from the general theorem \texttt{block\_homological\_traversal\_real\_log\_bound}) is the formal statement inside Lean~4 asserting that for all $n \ge 2$ and $\varepsilon \in \mathbb{R}$, running \texttt{simulateBlockHomologicalTraversal n m (logBlockSize n $\varepsilon$)} starting with \texttt{steps = 0} produces a final \texttt{CountingState} whose \texttt{steps} field satisfies:
-\[
-(\mathrm{finalState.steps} : \mathbb{R}) \le (n + m)^2 + 2^{\frac{n}{(\log n)^{1/2 + \varepsilon}}}.
-\]
-Conversely, \texttt{simulateLatticeTraversal\_exceeds\_subExponential\_bound} proves via a self-contained bound $e = \mathrm{Real.exp}(1) < 3$ (\texttt{exp\_one\_lt\_three}) that for all $n \ge 3$ and $\varepsilon \ge 0$, $(\log n)^{1/2 + \varepsilon} > 1$ (\texttt{logDenominator\_gt\_one}) and $2^{n / (\log n)^{1/2 + \varepsilon}} < 2^n$ (\texttt{subExponential\_rpow\_lt\_two\_pow}), certifying that the un-decomposed baseline \texttt{simulateLatticeTraversal} strictly exceeds the sub-exponential bound whereas the block-decomposed traversal satisfies it.
-
-\paragraph{3. The Exact Mathematical Code Mapping.}
-In pure functional Lean~4 code, \texttt{StateM} strips away imperative abstractions and evaluates to a pure state-transformation function:
-\[
-f : \mathrm{Input} \times \mathrm{CountingState} \longrightarrow \mathrm{Result} \times \mathrm{CountingState}.
-\]
-When Lean~4 verifies a \texttt{CountM} theorem, it evaluates the final mutated state tuple in three stages:
+\begin{theorem}[Order and meet]\label{thm:order}
+For all clauses $c,c_1,c_2,c_3$:
 \begin{enumerate}
-    \item \emph{Monad Reduction (\texttt{simp}):} Applying \texttt{simp [Bind.bind, StateT.bind, StateT.run, modify, modifyGet, Pure.pure, StateT.pure]} (encapsulated in the \texttt{@[simp]} unfolding lemmas \texttt{tick\_run}, \texttt{simulateLatticeTraversal\_run}, and \texttt{simulateBlockHomologicalTraversal\_run}) collapses sequential monadic binds into a closed-form arithmetic expression on the returned state tuple.
-    \item \emph{State Injection (\texttt{injection}):} The \texttt{injection} tactic (\texttt{state\_injection\_steps}) decouples the Boolean decision output from \texttt{finalState.steps}, extracting the exact equality $\mathrm{finalState.steps} = s_0 + (n+m)^2 + 2^{n / \max(\mathrm{blockK}, 1)}$.
-    \item \emph{Arithmetic Discharge (\texttt{omega} on $\mathbb{N}$ vs.\ Mathlib Real Analysis on $\mathbb{R}$):} For discrete natural-number inequalities (\texttt{lattice\_traversal\_complexity\_bound}, \texttt{block\_homological\_traversal\_bound}, and \texttt{subexponential\_exponent\_strictly\_smaller}), Lean's \texttt{omega} tactic uses Presburger arithmetic (together with \texttt{Nat.div\_lt\_self}) to close the goal. Because Presburger arithmetic decides only linear integer arithmetic and cannot reason about real exponentiation $2^{(\cdot)}$ or logarithms $\log n$, the real-valued inequality in \texttt{block\_homological\_traversal\_real\_log\_bound} and \texttt{simulateBlockHomologicalTraversal\_at\_logBlockSize\_bound} is discharged using Mathlib's real-analysis lemmas (\texttt{Real.log\_pos}, \texttt{Real.rpow\_pos\_of\_pos}, \texttt{Nat.cast\_div\_le}, \texttt{Real.rpow\_le\_rpow\_of\_exponent\_le}, \texttt{Nat.le\_ceil}, and \texttt{linarith}).
+\item $c\preceq c$; if $c_1\preceq c_2$ and $c_2\preceq c_1$ then $c_1=c_2$; if $c_1\preceq c_2\preceq c_3$ then $c_1\preceq c_3$;
+\item $\emptyset\preceq c$, where $\emptyset$ is the empty clause;
+\item $c_1\wedge c_2\preceq c_1$ and $c_1\wedge c_2\preceq c_2$, and $c\preceq c_1\wedge c_2$ iff $c\preceq c_1$ and $c\preceq c_2$.
 \end{enumerate}
+\end{theorem}
+The corresponding statements for single variable states (reflexivity, antisymmetry, transitivity of $\sqsubseteq$; $s\sqsubseteq s_1\wedge s_2\iff s\sqsubseteq s_1\wedge s\sqsubseteq s_2$; the meet lies below both arguments) and the componentwise characterization of $\preceq$ are proved as lemmas.
 
-\section{Architectural Alignment with Independent Repositories}
-The formal verification tactics employed in the companion Lean~4 package \texttt{ConflictClauseLattice} align directly with the verification architecture developed across the author's independent repositories (\texttt{@BenFrohman}, ORCID \texttt{0009-0006-7068-3718})~\cite{demoura2021lean4,frohman2026ns_tether_june1,frohman2026fsymhd}:
+\section{Alternating sums and boundary identities}
+\begin{proposition}\label{prop:euler}
+$|L^{(0)}|-|L^{(1)}|+|L^{(2)}|-|L^{(3)}|=1-6+12-8=-1$ and $|L^{(1)}|-|L^{(2)}|+|L^{(3)}|=2$, where $L^{(k)}$ is the rank-$k$ layer.
+\end{proposition}
+
+For $f:L_3\to\mathbb{Z}$ and an ordered pair $(v_0,v_1)$ put $\partial f(v_0,v_1)=f(v_1)-f(v_0)$, and for a triple $(v_0,v_1,v_2)$ put $\partial^2f(v_0,v_1,v_2)=\partial f(v_1,v_2)-\partial f(v_0,v_2)+\partial f(v_0,v_1)$. Similarly, for $g$ defined on ordered pairs, put $\delta g(v_0,v_1,v_2)=g(v_1,v_2)-g(v_0,v_2)+g(v_0,v_1)$ and let $\delta^2g(v_0,\dots,v_3)$ be the alternating sum of $\delta g$ over the four faces.
+\begin{proposition}\label{prop:dd}
+For all $f:L_3\to\mathbb{Z}$, all $g:L_3\times L_3\to\mathbb{Z}$ and all $v_0,\dots,v_3\in L_3$: $\partial^2f(v_0,v_1,v_2)=0$ and $\delta^2g(v_0,v_1,v_2,v_3)=0$.
+\end{proposition}
+\begin{remark}
+These are the identities $\partial\circ\partial=0$ evaluated against cochains. They hold for \emph{arbitrary} tuples of clauses, not only for chains of $L_3$, and their proofs are linear-arithmetic cancellation; they use no property of the order. The formalization does not define the order complex of $L_3$ or compute its homology.
+\end{remark}
+
+\section{Model counting by unobstructed atoms}
+An assignment is $\alpha\in\{0,1\}^3$. A clause is satisfied by $\alpha$ if one of its literals is true under $\alpha$ (the empty clause is never satisfied), and a CNF formula, given as a list $\Phi$ of clauses, is satisfied if all its clauses are. Let $\#\Phi$ be the number of satisfying assignments (Lean: \lean{modelCount3}). For $\alpha$, its \emph{dual atom} $A_\alpha$ is the rank-$3$ clause with literal $\neg\alpha_i$ on each $x_i$, the unique full clause falsified by $\alpha$. A rank-$3$ clause $A$ is \emph{unobstructed} by $\Phi$ if no $c\in\Phi$ satisfies $c\preceq A$.
+
+\begin{lemma}\label{lem:dual}
 \begin{enumerate}
-    \item \textbf{Monad Reduction (\texttt{simp [Bind.bind, StateT.bind]}):} Originating in the author's three-torus $\mathbb{T}^3$ fluid dynamics verification pipeline (\texttt{NS\_Millennium\_Proof}~\cite{frohman2026ns_tether_june1}), sequential monadic bind operations over state records are unfolded to pure state-transformation functions $f : \text{Input} \times \text{CountingState} \to \text{Result} \times \text{CountingState}$.
-    \item \textbf{State Injection (\texttt{injection}):} Decouples the procedural return value from the mutated telemetry state \texttt{CountingState.steps}, isolating the exact arithmetic step accumulator.
-    \item \textbf{Presburger Arithmetic (\texttt{omega}) and Mathlib Real Analysis (\texttt{Real.log}, \texttt{Real.rpow}):} Discharges the resulting integer step inequalities over $\mathbb{N}$ via \texttt{omega} (mirroring the spatial lattice reductions in Frohmanian Symplectohydrodynamics, \texttt{FSymHD}~\cite{frohman2026fsymhd}) and bridges discrete block sizes $\lceil(\log n)^{1/2+\varepsilon}\rceil$ to real-analytic complexity bounds over $\mathbb{R}$.
+\item For every clause $c$ and assignment $\alpha$: $\alpha$ satisfies $c$ iff $c\not\preceq A_\alpha$.
+\item Hence $\alpha$ satisfies $\Phi$ iff $A_\alpha$ is unobstructed by $\Phi$.
+\item The map $\alpha\mapsto A_\alpha$, applied to the eight assignments in their standard enumeration, lists exactly the rank-$3$ layer.
 \end{enumerate}
+\end{lemma}
+\begin{theorem}[\lean{modelCount3_eq_unobstructedAtomCount3}]\label{thm:count}
+For every CNF formula $\Phi$ over $x_1,x_2,x_3$, $\#\Phi$ equals the number of rank-$3$ clauses unobstructed by $\Phi$.
+\end{theorem}
 
-\paragraph*{Verification Scope and Mathematical Honesty.}
-We distinguish strictly between (i) mathematical proof verification, which is performed exclusively by the official Lean~4 kernel (\texttt{leanprover/lean4:v4.30.0-rc1} via \texttt{lake build} and \texttt{lake env lean AxiomAudit.lean}, documented in \texttt{LAKE\_KERNEL\_BUILD\_CERTIFICATE.json}), and (ii) auxiliary static-hygiene and provenance utilities (\texttt{titan-audit} for AST token scanning and \texttt{SealGuard} for SHA-256 Merkle timestamping, neither of which is a mathematical verifier). Furthermore, we state our formal scope transparently: the 69 kernel-verified theorems unconditionally prove (a) the 27-clause, 54-edge structure and bounded meet-semilattice laws of $\mathcal{L}_3$ (\texttt{PosetLattice.lean}, 25 theorems), (b) the chain-complex identity $\partial_{k-1}\circ\partial_k=0$, Euler characteristic $\chi(\mathcal{L}_3)=-1$, and exact finite model-counting bijection $\#\text{3-SAT}(\Phi)=\mathrm{unobstructedAtomCount}_3(\Phi)$ on $\mathcal{L}_3$ (\texttt{HomologicalCertificate.lean}, 18 theorems), (c) the discrete \texttt{CountM} monadic step-count bounds (\texttt{lattice\_traversal\_complexity\_bound} $\le n^2 + 2^n$ and \texttt{block\_homological\_traversal\_bound} $\le (n+m)^2 + 2^{n/\max(k,1)}$ via \texttt{simp}, \texttt{injection}, and \texttt{omega}) together with the real-valued logarithmic bounds (\texttt{block\_homological\_traversal\_real\_log\_bound}, \texttt{simulateBlockHomologicalTraversal\_at\_logBlockSize\_bound}, \texttt{subExponential\_rpow\_lt\_two\_pow}, and \texttt{simulateLatticeTraversal\_exceeds\_subExponential\_bound}, and \texttt{denominator\_divergence} via Mathlib's \texttt{Real.log} and \texttt{Real.rpow} in \texttt{StepCountingMonad.lean}, 25 theorems), and (d) the 5-pillar master conjunction (\texttt{FinalProductTheorem.lean}, 1 theorem). The \texttt{CountM} telemetry harness certifies the exact \texttt{tick} count of the pure functional Lean cost models (\texttt{simulateLatticeTraversal} and \texttt{simulateBlockHomologicalTraversal} parameterized by $(n, m, \mathrm{blockK})$); it does not measure physical compiler-emitted machine instructions and does not by itself prove an unconditional block-rank decomposition for arbitrary coupled $n$-variable 3-CNF boundary matrices.
+\section{Step counting}\label{sec:steps}
+A computation in the state monad $\mathrm{CountM}$ carries a natural-number counter; $\mathrm{tick}(k)$ adds $k$. Two programs are defined:
+\begin{itemize}
+\item $\mathrm{simLattice}(n)$: $\mathrm{tick}(n\cdot n)$; $\mathrm{tick}(2^n)$; return true.
+\item $\mathrm{simBlock}(n,m,k)$: $\mathrm{tick}((n+m)^2)$; $\mathrm{tick}(2^{\lfloor n/\max(k,1)\rfloor})$; return true.
+\end{itemize}
+Let $\ell(n,\varepsilon)=(\log n)^{1/2+\varepsilon}$ (natural logarithm, real power) and $b(n,\varepsilon)=\lceil\ell(n,\varepsilon)\rceil$.
 
-\subsection{Prior-Art Timeline and Origin Clawback Attestation}
-To preclude unattributed derivative proliferation or third-party re-presentation of the author's thematic invariants, this archive (\texttt{10.5281/zenodo.23747592}) is cryptographically chained via DataCite \texttt{IsDerivedFrom} relations to the author's prior server-attested records: (i) \texttt{Sentinel Gate} (\texttt{10.5281/zenodo.23632766}, April~4, 2026) and \texttt{Agentic-Dev} (\texttt{10.5281/zenodo.23632768}, April~8, 2026); (ii) the \texttt{NS\_Millennium\_Proof} and \texttt{Lean\_Formalization\_2026-05-28} Google Drive archives (May~27--29, 2026, Drive IDs \texttt{1t6gNjlug13-j2amIgXashkoMoLwQ2-sv} and \texttt{1VtDm0DBEpiNeh3fepG5S9P9gTRzfc2sy}); (iii) the June~1, 2026 \texttt{Frohmanian Symplectic Tether} and \texttt{FSymHD} archives (\texttt{10.5281/zenodo.23629499}, \texttt{10.5281/zenodo.23632786}); (iv) \texttt{SealGuard} (\texttt{10.5281/zenodo.23631670}, August~22, 2026); and (v) \texttt{Partial Orders of Intelligence} (\texttt{10.5281/zenodo.23629474}, October~1--23, 2026) and \texttt{Titan Audit} (\texttt{10.5281/zenodo.23630648}, October~24, 2026)~\cite{frohman2026sentinel_sealguard,frohman2026titanaudit}.
+\begin{theorem}[Tick counts]\label{thm:ticks}
+\begin{enumerate}
+\item From counter $s$, $\mathrm{tick}(k)$ ends at $s+k$; $\mathrm{tick}(a);\mathrm{tick}(b)$ ends at $s+a+b$.
+\item From $s$, $\mathrm{simLattice}(n)$ returns true with counter $s+n\cdot n+2^n$, and $\mathrm{simBlock}(n,m,k)$ returns true with counter $s+(n+m)^2+2^{\lfloor n/\max(k,1)\rfloor}$.
+\item Started from $0$, $\mathrm{simLattice}(n)$ ends with exactly $n^2+2^n$ ticks (in particular at most that many), and $\mathrm{simBlock}(n,m,k)$ ends with at most $(n+m)^2+2^{\lfloor n/\max(k,1)\rfloor}$ ticks.
+\end{enumerate}
+\end{theorem}
 
-\section{Interactive 3D Lattice Geometry and Machine-Checked Verification}
-Figures~\ref{fig:lattice_3d_overview} and~\ref{fig:lattice_obstruction_layers} illustrate the three-dimensional interactive rendering of the 3-variable Conflict Clause Lattice $\mathcal{L}_3$ (27 conflict clauses, 54 resolution/implication edges, and the 8 dual truth-assignment atoms at Layer~3).
+\begin{theorem}[Real-logarithmic bounds]\label{thm:log}
+\begin{enumerate}
+\item If $n\ge2$ and $k\ge2$ are natural numbers, then $\lfloor n/k\rfloor<n$.
+\item If $n\ge2$, $k\ge1$ and $\ell(n,\varepsilon)\le k$, then the final count of $\mathrm{simBlock}(n,m,k)$ from $0$ is at most $(n+m)^2+2^{n/\ell(n,\varepsilon)}$.
+\item In particular, for $n\ge2$ and every real $\varepsilon$, running $\mathrm{simBlock}(n,m,b(n,\varepsilon))$ from $0$ ends with at most $(n+m)^2+2^{n/(\log n)^{1/2+\varepsilon}}$ ticks.
+\item For $n\ge3$ and $\varepsilon\ge0$: $2^{n/\ell(n,\varepsilon)}<2^n$, and the final count $n^2+2^n$ of $\mathrm{simLattice}(n)$ strictly exceeds $n^2+2^{n/\ell(n,\varepsilon)}$.
+\end{enumerate}
+\end{theorem}
+Supporting facts proved along the way: $e<3$; $\log n>0$ for $n\ge2$ and $\log n>1$ for $n\ge3$; $\ell(n,\varepsilon)>0$ for $n\ge2$ and $\ell(n,\varepsilon)>1$ for $n\ge3,\varepsilon\ge0$; $\ell\le b$; $b\ge1$ for $n\ge2$ and $b\ge2$ for $n\ge3,\varepsilon\ge0$.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.92\textwidth]{lattice_visualization_1.jpg}
-    \caption{Three-dimensional graded Hasse diagram of the Conflict Clause Lattice $\mathcal{L}_3$ across Layers $0, 1, 2, 3$, showing the unique bottom contradiction $\bot$ (Layer~0), the 6 unit clauses (Layer~1), the 12 binary clauses (Layer~2), and the 8 ternary conflict clauses / dual truth-assignment atoms (Layer~3), together with the formal verification summary panel.}
-    \label{fig:lattice_3d_overview}
-\end{figure}
+\begin{proposition}[\lean{denominator_divergence}]\label{prop:div}
+If $o:\mathbb{R}\to\mathbb{R}$ satisfies $o=o(1)$ as $x\to\infty$, then $(\log x)^{1/2+o(x)}\to\infty$ as $x\to\infty$.
+\end{proposition}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.92\textwidth]{lattice_visualization_2.jpg}
-    \caption{Detailed view of the graded poset filtration and homological boundary incidences $\partial_k : C_k(\mathcal{L}_3) \to C_{k-1}(\mathcal{L}_3)$, highlighting obstructed Layer~3 dual atoms and the exact unobstructed model-counting bijection $\#\text{3-SAT}(\Phi) = |\text{Unobstructed}(L_3)|$.}
-    \label{fig:lattice_obstruction_layers}
-\end{figure}
+\begin{remark}
+Theorems~\ref{thm:ticks} and~\ref{thm:log} are exact statements about the counters of the two programs above, whose tick amounts are written into their definitions. They are not lower or upper bounds on any algorithm for satisfiability or model counting.
+\end{remark}
 
-\subsection{Machine-Checked Step-Counting Monad and Kernel Audit}
-To eliminate any gap between the theoretical complexity bound in Equation~\eqref{eq:subexp_bound} and the executable specification, the companion Lean~4 module \texttt{ConflictClauseLattice/StepCountingMonad.lean} formalizes both the discrete \texttt{CountM} monad reduction and the real-valued logarithmic complexity bound:
-\begin{verbatim}
-noncomputable def logDenominator (n : Nat) (eps : Real) : Real :=
-  (Real.log (n : Real)) ^ ((1 : Real) / 2 + eps)
+\section{Master theorem}
+\begin{theorem}[\lean{eth_conflict_clause_lattice_master_product_theorem}]\label{thm:master}
+The conjunction of: Theorem~\ref{thm:graded} (the counts $27,1,6,12,8,54$); Theorem~\ref{thm:order}(1),(2) and the meet characterization in~(3); Proposition~\ref{prop:dd} and the first identity of Proposition~\ref{prop:euler}; Theorem~\ref{thm:count}; the bounds of Theorem~\ref{thm:ticks}(3); and Theorem~\ref{thm:log}(1),(3) and the first inequality of~(4).
+\end{theorem}
 
-noncomputable def subExponentialBoundReal (n m : Nat) (eps : Real) : Real :=
-  ((n + m : Real) ^ 2) + (2 : Real) ^ ((n : Real) / logDenominator n eps)
-
-noncomputable def logBlockSize (n : Nat) (eps : Real) : Nat :=
-  Nat.ceil (logDenominator n eps)
-
-theorem block_homological_traversal_real_log_bound
-    (n m blockK : Nat) (eps : Real) (res : Bool) (finalState : CountingState)
-    (hn : n >= 2) (hk_ge_one : blockK >= 1)
-    (hk_log : logDenominator n eps <= (blockK : Real))
-    (hrun : (simulateBlockHomologicalTraversal n m blockK).run
-      { steps := 0 } = (res, finalState)) :
-    (finalState.steps : Real) <= subExponentialBoundReal n m eps
-
-theorem simulateBlockHomologicalTraversal_at_logBlockSize_bound
-    (n m : Nat) (eps : Real) (res : Bool) (finalState : CountingState)
-    (hn : n >= 2)
-    (hrun : (simulateBlockHomologicalTraversal n m
-      (logBlockSize n eps)).run { steps := 0 } = (res, finalState)) :
-    (finalState.steps : Real) <=
-      ((n + m : Real) ^ 2) +
-        (2 : Real) ^ ((n : Real) / (Real.log (n : Real)) ^ ((1 : Real) / 2 + eps))
-\end{verbatim}
-In addition, \texttt{denominator\_divergence} proves that for any perturbation $o:\mathbb{R}\to\mathbb{R}$ with $o = o(1)$ as $n\to\infty$ (Mathlib \texttt{Asymptotics.IsLittleO}), the denominator $(\log n)^{1/2+o(n)}$ tends to $+\infty$, so the exponent $n/(\log n)^{1/2+o(1)}$ is asymptotically $o(n)$; this is a statement about the bound itself and not about any SAT algorithm.
-
-Table~\ref{tab:lean_audit} summarizes the four formalized Lean~4 modules in the companion package \texttt{ConflictClauseLattice}, verified via in-kernel \texttt{AxiomAudit.lean} inspection and sealed with \texttt{titan-audit} (Ed25519 cryptographic attestation) and \texttt{SealGuard} (SHA-256 Merkle provenance tree)~\cite{frohman2026titanaudit}.
-
-\begin{table}[htbp]
-\centering
-\caption{Lean~4 (\texttt{v4.30.0-rc1} + Mathlib) Kernel Verification Summary for \texttt{ConflictClauseLattice}}
-\label{tab:lean_audit}
-\begin{tabular}{@{}lrrl@{}}
+\section{Correspondence between claims and Lean declarations}
+All names are in namespace \lean{ConflictClauseLattice}; Lean~4 v4.30.0-rc1 with Mathlib.
+\begin{longtable}{@{}p{0.33\textwidth}p{0.62\textwidth}@{}}
 \toprule
-\textbf{Module} & \textbf{Theorems} & \textbf{Nonstd.\ Axioms} & \textbf{Kernel Axiom Footprint} \\
+Claim & Lean declaration(s)\\
 \midrule
-\texttt{PosetLattice}           & 25 & 0 & \texttt{[propext]} \\
-\texttt{HomologicalCertificate} & 18 & 0 & \texttt{[propext, Quot.sound]} \\
-\texttt{StepCountingMonad}      & 25 & 0 & \texttt{[propext, Classical.choice, Quot.sound]} \\
-\texttt{FinalProductTheorem}    &  1 & 0 & \texttt{[propext, Classical.choice, Quot.sound]} \\
-\midrule
-\textbf{Total Verified}         & \textbf{69} & \textbf{0} & \textbf{0 \texttt{sorry}, 0 \texttt{trustCompiler}} \\
+\endhead
+Thm.~\ref{thm:graded}(1) & \lean{card_allValidClauses3}, \lean{layer0_count}, \lean{layer1_count}, \lean{layer2_count}, \lean{layer3_count}, \lean{layer_partition_sum_three}\\
+Thm.~\ref{thm:graded}(2) & \lean{coveringEdges3_count}, \lean{coveringEdges_by_layer}\\
+Thm.~\ref{thm:order}(1) & \lean{impliesPoset_refl}, \lean{impliesPoset_antisymm}, \lean{impliesPoset_trans}\\
+Thm.~\ref{thm:order}(2) & \lean{emptyClause3_minimal}\\
+Thm.~\ref{thm:order}(3) & \lean{clauseMeet_implies_left}, \lean{clauseMeet_implies_right}, \lean{implies_clauseMeet_iff}\\
+Variable-state lemmas & \lean{varStateSub_refl}, \lean{varStateSub_antisymm}, \lean{varStateSub_trans}, \lean{varStateSub_meet_eq}, \lean{varStateMeet_sub_left}, \lean{varStateMeet_sub_right}, \lean{impliesPoset_iff}\\
+Prop.~\ref{prop:euler} & \lean{euler_poincare_L3}, \lean{non_empty_euler_characteristic_L3}\\
+Prop.~\ref{prop:dd} & \lean{boundary1_comp_boundary2_eq_zero}, \lean{boundary2_comp_boundary3_eq_zero}\\
+Lemma~\ref{lem:dual} & \lean{varStateSat_eq_not_varStateSub}, \lean{satisfiesClause_iff_not_implies_dualAtom}, \lean{satisfiesFormula_eq_isUnobstructed_dualAtom}, \lean{dualAtoms_eq_layer3}\\
+Thm.~\ref{thm:count} & \lean{modelCount3_eq_unobstructedAtomCount3}\\
+Thm.~\ref{thm:ticks}(1) & \lean{tick_run}, \lean{monad_reduction_two_ticks}\\
+Thm.~\ref{thm:ticks}(2) & \lean{simulateLatticeTraversal_run}, \lean{simulateBlockHomologicalTraversal_run}\\
+Thm.~\ref{thm:ticks}(3) & \lean{state_injection_steps}, \lean{lattice_traversal_steps_exact}, \lean{lattice_traversal_complexity_bound}, \lean{block_homological_traversal_bound}\\
+Thm.~\ref{thm:log}(1) & \lean{subexponential_exponent_strictly_smaller}\\
+Thm.~\ref{thm:log}(2) & \lean{block_homological_traversal_real_log_bound}\\
+Thm.~\ref{thm:log}(3) & \lean{simulateBlockHomologicalTraversal_at_logBlockSize_bound}\\
+Thm.~\ref{thm:log}(4) & \lean{subExponential_rpow_lt_two_pow}, \lean{simulateLatticeTraversal_exceeds_subExponential_bound}\\
+Supporting facts & \lean{exp_one_lt_three}, \lean{log_nat_pos_of_ge_two}, \lean{one_lt_log_nat_of_ge_three}, \lean{logDenominator_pos}, \lean{logDenominator_gt_one}, \lean{logDenominator_le_logBlockSize}, \lean{logBlockSize_ge_one}, \lean{logBlockSize_ge_two}\\
+Prop.~\ref{prop:div} & \lean{denominator_divergence}\\
+Thm.~\ref{thm:master} & \lean{eth_conflict_clause_lattice_master_product_theorem}\\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{longtable}
 
-\bibliographystyle{plain}
-\bibliography{\jobname}
+\appendix
+\section{Verification certificate}\label{app:verification-certificate}
 
+The formal development was machine-checked as follows.
+
+{\raggedright
+\begin{itemize}
+\item Repository:\\ {\footnotesize\url{https://github.com/BenFrohman/eth-conflict-clause-lattice}}
+\item Verified commit:\\ {\footnotesize\texttt{8b03b20f6393c3c4dbc419b02932308fa99c116c}}
+\item Lean toolchain: \texttt{leanprover/lean4:v4.30.0-rc1}
+\item Mathlib: tag \texttt{v4.30.0-rc1}, commit (from \texttt{lake-manifest.json})\\ {\footnotesize\texttt{0c154d67103f74be3a0f2c509f72ccbf5be9f2a7}}
+\item Continuous integration run (build, axiom audit, \texttt{sorry}/\texttt{axiom} scan; passed):\\ {\footnotesize\url{https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/runs/41794839338}}
+\item SHA-256 of the GitHub source tarball of the verified commit, downloaded twice with identical result:\\ {\footnotesize\url{https://github.com/BenFrohman/eth-conflict-clause-lattice/archive/8b03b20f6393c3c4dbc419b02932308fa99c116c.tar.gz}}\\
+{\footnotesize\texttt{fd949b7876a66601ae0b5dc7a67cea9814c4823d62e84fad4a4dc934e4135798}}
+\end{itemize}\par}
+
+The tarball hash refers to the verified commit rather than to a release tag, since a document cannot contain the hash of an archive that includes itself. The Lean sources are unchanged between that commit and the release tag.
+
+\textbf{The development contains no \texttt{sorry} and no user-declared axioms.} Every one of the 54 theorems and lemmas listed below depends only on Lean's standard axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound} (or on none). The table is the verbatim output of \texttt{lake env lean AxiomAudit.lean} (\texttt{\#print axioms}) on the verified commit.
+
+{\footnotesize
+\begin{longtable}{p{0.55\linewidth}p{0.38\linewidth}}
+\hline
+Lean declaration & \texttt{\#print axioms} \\
+\hline\endhead
+\path{ConflictClauseLattice.eth_conflict_clause_lattice_master_product_theorem} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.boundary1_comp_boundary2_eq_zero} & \texttt{[propext, Quot.sound]} \\
+\path{ConflictClauseLattice.boundary2_comp_boundary3_eq_zero} & \texttt{[propext, Quot.sound]} \\
+\path{ConflictClauseLattice.dualAtoms_eq_layer3} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.euler_poincare_L3} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.modelCount3_eq_unobstructedAtomCount3} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.non_empty_euler_characteristic_L3} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.satisfiesClause_iff_not_implies_dualAtom} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.satisfiesFormula_eq_isUnobstructed_dualAtom} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.varStateSat_eq_not_varStateSub} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.card_allValidClauses3} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.clauseMeet_implies_left} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.clauseMeet_implies_right} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.coveringEdges3_count} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.coveringEdges_by_layer} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.emptyClause3_minimal} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.impliesPoset_antisymm} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.impliesPoset_iff} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.impliesPoset_refl} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.impliesPoset_trans} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.implies_clauseMeet_iff} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.layer0_count} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.layer1_count} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.layer2_count} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.layer3_count} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.layer_partition_sum_three} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.varStateMeet_sub_left} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.varStateMeet_sub_right} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.varStateSub_antisymm} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.varStateSub_meet_eq} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.varStateSub_refl} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.varStateSub_trans} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.block_homological_traversal_bound} & \texttt{[propext, Quot.sound]} \\
+\path{ConflictClauseLattice.block_homological_traversal_real_log_bound} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.denominator_divergence} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.exp_one_lt_three} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.lattice_traversal_complexity_bound} & \texttt{[propext, Quot.sound]} \\
+\path{ConflictClauseLattice.lattice_traversal_steps_exact} & \texttt{[propext, Quot.sound]} \\
+\path{ConflictClauseLattice.logBlockSize_ge_one} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.logBlockSize_ge_two} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.logDenominator_gt_one} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.logDenominator_le_logBlockSize} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.logDenominator_pos} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.log_nat_pos_of_ge_two} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.monad_reduction_two_ticks} & \texttt{(no axioms)} \\
+\path{ConflictClauseLattice.one_lt_log_nat_of_ge_three} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.simulateBlockHomologicalTraversal_at_logBlockSize_bound} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.simulateBlockHomologicalTraversal_run} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.simulateLatticeTraversal_exceeds_subExponential_bound} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.simulateLatticeTraversal_run} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.state_injection_steps} & \texttt{[propext]} \\
+\path{ConflictClauseLattice.subExponential_rpow_lt_two_pow} & \texttt{[propext, Classical.choice, Quot.sound]} \\
+\path{ConflictClauseLattice.subexponential_exponent_strictly_smaller} & \texttt{[propext, Quot.sound]} \\
+\path{ConflictClauseLattice.tick_run} & \texttt{(no axioms)} \\
+\hline
+\end{longtable}}
+
+\begin{thebibliography}{9}
+\bibitem{ip} R.~Impagliazzo and R.~Paturi, \emph{On the complexity of $k$-SAT}, J.\ Comput.\ System Sci.\ \textbf{62} (2001), 367--375.
+\bibitem{cdcl} J.~P.~Marques-Silva and K.~A.~Sakallah, \emph{GRASP: a search algorithm for propositional satisfiability}, IEEE Trans.\ Comput.\ \textbf{48} (1999), 506--521.
+\bibitem{mathlib} The mathlib Community, \emph{The Lean mathematical library}, CPP 2020, 367--381.
+\end{thebibliography}
 \end{document}

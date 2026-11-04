@@ -1,14 +1,15 @@
 cff-version: 1.2.0
-title: "Homological Certificate Topologies on Conflict-Clause Poset Lattices: A Lean 4–Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds"
+title: "The Three-Variable Conflict-Clause Poset: Graded Structure, Model Counting by Unobstructed Atoms, and Step-Counter Bounds, Formalized in Lean 4"
 message: "If you use this software or formalization, please cite it using the metadata from this file."
 type: software
 authors:
   - family-names: Frohman
-    given-names: Benjamin Stanley
+    given-names: "Benjamin Stanley"
+    email: frohmanbenjamin@gmail.com
     orcid: "https://orcid.org/0009-0006-7068-3718"
     affiliation: "Abstract AI Research Syndicate & Formal Methods Engineering Group"
-version: 1.1.1
-date-released: "2026-10-30"
+version: "1.2.0"
+date-released: "2026-11-04"
 doi: "10.5281/zenodo.23782560"
 url: "https://doi.org/10.5281/zenodo.23782560"
 repository-code: "https://github.com/BenFrohman/eth-conflict-clause-lattice"
