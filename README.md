@@ -85,3 +85,8 @@ Apache License 2.0. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). Copyright 2
 ## AI Assistance Disclosure
 
 Grok (xAI), via the Grok Bot assistant, provided scaffolding, drafting, and collaboration support on the formalization, code, and documentation in this repository. Benjamin Stanley Frohman (`frohmanbenjamin@gmail.com`, ORCID `0009-0006-7068-3718`) directed, reviewed, and is solely responsible for the architecture, implementation, proofs, and claims; Grok is not a coauthor.
+
+## Zenodo archive
+
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23747591.svg)](https://doi.org/10.5281/zenodo.23747591) Homological Certificate Topologies on Conflict-Clause Poset Lattices: A Lean 4–Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds (ConflictClauseLattice v1.1.1) — all versions: [10.5281/zenodo.23747591](https://doi.org/10.5281/zenodo.23747591); latest version: [10.5281/zenodo.23845207](https://doi.org/10.5281/zenodo.23845207)
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23867491.svg)](https://doi.org/10.5281/zenodo.23867491) Homological Certificate Topologies on Conflict-Clause Poset Lattices: A Lean 4–Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds (ConflictClauseLattice v1.1.1) — all versions: [10.5281/zenodo.23867491](https://doi.org/10.5281/zenodo.23867491); latest version: [10.5281/zenodo.23867492](https://doi.org/10.5281/zenodo.23867492)
