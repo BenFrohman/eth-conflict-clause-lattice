@@ -5,6 +5,7 @@ type: software
 authors:
   - family-names: Frohman
     given-names: "Benjamin Stanley"
+    alias: "B.S. Frohman"
     email: frohmanbenjamin@gmail.com
     orcid: "https://orcid.org/0009-0006-7068-3718"
     affiliation: "Abstract AI Research Syndicate & Formal Methods Engineering Group"
