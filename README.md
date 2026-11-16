@@ -4,6 +4,10 @@
 [![Lean 4](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/lean.yml)
 
 
+## Kernel certificate
+
+[certificates/CERTIFICATE.md](certificates/CERTIFICATE.md): commit `559fd9a`, `leanprover/lean4:v4.30.0-rc1`. `lake build` passes; the sorry/axiom scan finds 0 hits; **69 theorems depend only on `propext`, `Classical.choice`, `Quot.sound`**; 5 of 5 modules replayed through the kernel, 0 failures ([CI run](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/runs/43937903749)).
+
 **A Lean 4–Verified Step-Counting Framework for Sub-Exponential 3-SAT Cost Bounds (ConflictClauseLattice v1.1.1)**
 
 [![lean_action_ci.yml](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/lean_action_ci.yml/badge.svg?branch=main)](https://github.com/BenFrohman/eth-conflict-clause-lattice/actions/workflows/lean_action_ci.yml)
