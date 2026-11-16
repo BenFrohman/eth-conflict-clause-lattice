@@ -8,3 +8,9 @@ import ConflictClauseLattice.PosetLattice
 import ConflictClauseLattice.HomologicalCertificate
 import ConflictClauseLattice.StepCountingMonad
 import ConflictClauseLattice.FinalProductTheorem
+
+/-!
+# ConflictClauseLattice
+
+Machine-checked Lean 4 module.
+-/

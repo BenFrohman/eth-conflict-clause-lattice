@@ -6,6 +6,12 @@ Authors: Benjamin Stanley Frohman
 
 import ConflictClauseLattice.PosetLattice
 
+/-!
+# ConflictClauseLattice.HomologicalCertificate
+
+Machine-checked Lean 4 module.
+-/
+
 namespace ConflictClauseLattice
 
 /-! ### Section III: Simplicial Order Complex, Boundary Operators `∂_{k-1} ∘ ∂_k = 0`, and Model Counting -/

@@ -8,6 +8,12 @@ import Mathlib.Analysis.SpecialFunctions.Log.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 
+/-!
+# ConflictClauseLattice.StepCountingMonad
+
+Machine-checked Lean 4 module.
+-/
+
 namespace ConflictClauseLattice
 
 /-! ### Sections VI, VII & VIII: Step-Counting Monad, Monad Reduction, State Injection, and Complexity Bounds -/

@@ -8,6 +8,12 @@ import ConflictClauseLattice.PosetLattice
 import ConflictClauseLattice.HomologicalCertificate
 import ConflictClauseLattice.StepCountingMonad
 
+/-!
+# ConflictClauseLattice.FinalProductTheorem
+
+Machine-checked Lean 4 module.
+-/
+
 namespace ConflictClauseLattice
 
 /-- Master 5-Conjunct Product Theorem (`eth_conflict_clause_lattice_master_product_theorem`):

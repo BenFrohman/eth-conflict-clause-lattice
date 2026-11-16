@@ -4,6 +4,12 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Benjamin Stanley Frohman
 -/
 
+/-!
+# ConflictClauseLattice.PosetLattice
+
+Machine-checked Lean 4 module.
+-/
+
 namespace ConflictClauseLattice
 
 /-- Polarity state of a single Boolean variable xᵢ inside a valid (non-contradictory) clause:
