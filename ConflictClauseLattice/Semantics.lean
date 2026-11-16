@@ -67,6 +67,11 @@ theorem varStateSub_some_iff (s : Option Bool) (b : Bool) :
     varStateSub s (some b) = true ↔ (s = none ∨ s = some b) := by
   cases s <;> simp [varStateSub]
 
+theorem varStateSub_some_false_iff (s : Option Bool) (b : Bool) :
+    varStateSub s (some b) = false ↔ ¬ (s = none ∨ s = some b) := by
+  rw [← varStateSub_some_iff]
+  simp
+
 theorem allAssignments3_eq : allAssignments3 =
     [⟨false, false, false⟩, ⟨false, false, true⟩, ⟨false, true, false⟩, ⟨false, true, true⟩,
      ⟨true, false, false⟩, ⟨true, false, true⟩, ⟨true, true, false⟩, ⟨true, true, true⟩] := rfl
@@ -108,7 +113,8 @@ theorem unobstructedAtomCount3_eq_card (Φ : List ValidClause3) :
   apply List.filter_congr
   intro α _
   apply Bool.eq_iff_iff.mpr
-  simp [isUnobstructedAtom, dualAtomOfAssignment, isImplied, varStateSub_some_iff, and_assoc]
+  simp [isUnobstructedAtom, dualAtomOfAssignment, isImplied, varStateSub_some_false_iff]
+    <;> exact forall₂_congr fun c _ => by tauto
 
 /-- The fixed correspondence between the formal statement and the paper's claim. -/
 theorem intended_correspondence : formal_claim ↔ paper_claim := by
