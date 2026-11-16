@@ -6,7 +6,7 @@
   "main_theorems": [
     "ConflictClauseLattice.modelCount3_eq_unobstructedAtomCount3"
   ],
-  "lock_region_sha256": "317f78fa6dfbc8db327040d89d96f2f5c2b1326f2ada38af648bc29571630ac4",
+  "lock_region_sha256": "5a8ff72e27f838cbedbb7970c236f51d0cad84e486b07ce062d7612cf0b4027f",
   "draft_dirs": [
     "ConflictClauseLattice/Draft"
   ],

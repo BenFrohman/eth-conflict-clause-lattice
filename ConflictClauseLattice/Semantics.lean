@@ -87,20 +87,28 @@ theorem modelCount3_eq_card (Φ : List ValidClause3) :
   congr 1
   apply List.filter_congr
   intro α _
-  simp [satisfiesFormula, satisfiesClause, varStateSat_iff]
+  apply Bool.eq_iff_iff.mpr
+  simp [satisfiesFormula, satisfiesClause, varStateSat_iff, or_assoc]
+
+/-- Negating every coordinate is a bijection of `Bool × Bool × Bool`, so it preserves counts. -/
+theorem card_filter_neg (P : Bool × Bool × Bool → Prop) [DecidablePred P] :
+    (Finset.univ.filter P).card =
+      (Finset.univ.filter (fun x : Bool × Bool × Bool => P (!x.1, !x.2.1, !x.2.2))).card := by
+  rw [Finset.card_filter, Finset.card_filter]
+  simp only [Fintype.sum_prod_type, Fintype.sum_bool, Bool.not_true, Bool.not_false]
+  ring
 
 theorem unobstructedAtomCount3_eq_card (Φ : List ValidClause3) :
     unobstructedAtomCount3 Φ = (Finset.univ.filter (fun A : Bool × Bool × Bool =>
         ∀ c ∈ Φ, ¬ ((c.x1 = none ∨ c.x1 = some A.1) ∧ (c.x2 = none ∨ c.x2 = some A.2.1) ∧
           (c.x3 = none ∨ c.x3 = some A.2.2)))).card := by
-  rw [unobstructedAtomCount3, ← dualAtoms_eq_layer3, List.filter_map, List.length_map,
-    ← List.countP_eq_length_filter, allAssignments3_eq, Finset.card_filter]
-  simp only [Fintype.sum_prod_type, Fintype.sum_bool, List.countP_cons, List.countP_nil,
-    Function.comp_apply, isUnobstructedAtom, dualAtomOfAssignment, isImplied, List.all_eq_true,
-    Bool.and_eq_true, varStateSub_some_iff, Bool.not_eq_true', Bool.not_true, Bool.not_false,
-    decide_eq_true_eq]
-  simp only [Bool.eq_false_iff, ne_eq, Bool.and_eq_true, varStateSub_some_iff]
-  ring
+  rw [card_filter_neg, card_filter_eq_length, unobstructedAtomCount3, ← dualAtoms_eq_layer3,
+    List.filter_map, List.length_map]
+  congr 1
+  apply List.filter_congr
+  intro α _
+  apply Bool.eq_iff_iff.mpr
+  simp [isUnobstructedAtom, dualAtomOfAssignment, isImplied, varStateSub_some_iff, and_assoc]
 
 /-- The fixed correspondence between the formal statement and the paper's claim. -/
 theorem intended_correspondence : formal_claim ↔ paper_claim := by
