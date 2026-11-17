@@ -2,7 +2,7 @@
   "semantics_file": "ConflictClauseLattice/Semantics.lean",
   "semantics_module": "ConflictClauseLattice.Semantics",
   "paper_path": "paper/main.tex",
-  "paper_sha256": "281ce4520787c819d3184721c9d853f124307abc9be3da2c3394bc7dbc7aeec7",
+  "paper_sha256": "40e7432e4aa17c0c6730482b9428679f38c75e77eaf8e17c6dbf1c461646435f",
   "main_theorems": [
     "ConflictClauseLattice.modelCount3_eq_unobstructedAtomCount3"
   ],

@@ -12,7 +12,7 @@ import ConflictClauseLattice.HomologicalCertificate
 
 PAPER_PATH: paper/main.tex
 PAPER_SECTION: Section "Model counting by unobstructed atoms", Theorem thm:count
-PAPER_SHA256: 281ce4520787c819d3184721c9d853f124307abc9be3da2c3394bc7dbc7aeec7
+PAPER_SHA256: 40e7432e4aa17c0c6730482b9428679f38c75e77eaf8e17c6dbf1c461646435f
 
 Locked paper claim, quoted verbatim:
 

@@ -73,7 +73,7 @@ Reports are written to `truth-gate-report/`.
 ## The locked claim of this repository
 
 * Paper: `paper/main.tex`
-* sha256: `281ce4520787c819d3184721c9d853f124307abc9be3da2c3394bc7dbc7aeec7`
+* sha256: `40e7432e4aa17c0c6730482b9428679f38c75e77eaf8e17c6dbf1c461646435f`
 * Section: Section "Model counting by unobstructed atoms", Theorem thm:count
 * Main theorem(s): `ConflictClauseLattice.modelCount3_eq_unobstructedAtomCount3`
 * Lock file: `TRUTH_GATE.lock`; semantics: `ConflictClauseLattice/Semantics.lean`
