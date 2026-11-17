@@ -1,3 +1,5 @@
+% Copyright (c) 2026 Benjamin Stanley Frohman
+% Licensed under the Apache License 2.0
 \documentclass[11pt]{amsart}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
@@ -24,6 +26,8 @@
 We study the finite poset $L_3$ of all $27$ clauses over three Boolean variables, ordered by literal inclusion (equivalently, by logical implication $c_1\models c_2$ for sub-clauses). We prove in Lean~4 with Mathlib that $L_3$ is graded with layer sizes $1,6,12,8$ and $54$ covering edges; that literal inclusion is a partial order with least element the empty clause and with a componentwise meet that is a greatest lower bound; that the alternating layer sum is $-1$; and that for every CNF formula $\Phi$ over the three variables the number of satisfying assignments equals the number of rank-$3$ clauses not implied by any clause of $\Phi$. We also formalize a step-counting state monad and prove exact tick counts and upper bounds for two explicitly defined simulation programs, including a bound of the form $(n+m)^2+2^{n/(\log n)^{1/2+\varepsilon}}$ for the block program run at block size $\lceil(\log n)^{1/2+\varepsilon}\rceil$. These bounds concern the tick counters of the defined programs only; no claim is made about the complexity of SAT, \#SAT, or the Exponential Time Hypothesis. All proofs are free of \texttt{sorry} and \texttt{native\_decide} and use only Lean's standard axioms; the main results are bundled in a single master theorem.
 \end{abstract}
 \maketitle
+\noindent{\small Copyright (c) 2026 Benjamin Stanley Frohman. Licensed under the Apache License 2.0.}\par
+
 
 \section{Introduction}
 Clause learning in SAT solvers manipulates clauses ordered by subsumption. For a fixed small number of variables this order is a finite poset that can be analysed exhaustively. This paper gives a complete, kernel-checked account of the case of three variables, together with an exact identity relating model counting to the poset, and a small formal framework for counting the steps of programs written in a state monad.
