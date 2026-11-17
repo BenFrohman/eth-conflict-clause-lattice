@@ -1,0 +1,10 @@
+{
+  "_comment": "Lint configuration for scripts/truth_gate_classify.py (see TRUTH_GATE.md, 'Lock-form lint'). It does not change any locked claim: the lock region hash in TRUTH_GATE.lock still pins paper_claim. paper_vocabulary lists the basic repository notions the locked paper side already uses.",
+  "locks": {
+    "main lock": {
+      "paper_vocabulary": {
+        "ValidClause3": "the paper's valid (non-contradictory) 3-variable clause: one polarity state none / xᵢ / ¬xᵢ per variable (a data structure with fields x1 x2 x3, not a hypothesis); already used by the locked paper_claim"
+      }
+    }
+  }
+}
